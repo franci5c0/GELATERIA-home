@@ -1,0 +1,172 @@
+
+* {
+margin: 0;
+box-sizing: border-box;
+}
+
+/*TITULO PRINCIPAL*/
+
+
+/*LINHA DE SEPARAÇÃO*/
+hr {
+border: 1px solid #A0522D;
+box-shadow: 2px 2px;
+}
+
+.titulo-principal {
+    font-size: 60px;
+    text-transform: uppercase;
+    font-family: "Bungee Tint";
+    text-align: center;
+    position: relative;
+    bottom: -70px;
+ }
+
+.hr {
+    border: 1px solid #A0522D;
+    box-shadow: 7px 7px;
+}
+
+/*TOPO*/
+.cabeçalho {
+width: 100%;
+background-image: url(gradient_1000_500.png);
+background-size: 100%;
+background-position: 0px -420px;
+background-repeat: no-repeat;
+height: 200px;
+}
+
+.logo {
+width: 250px;
+height: 250px;
+position: relative;
+left: 847px;
+bottom: 110px;
+}
+
+.logo img {
+    width: 250px;
+    position: absolute;
+    left: -800px;
+    margin: 20px;
+    }
+
+
+/*CORPO*/
+body {
+background-repeat: no-repeat;
+margin: 0;
+padding: 0;
+/*background-image: url(/css/teste9.jpeg);*/
+background-size: 100%;
+background-position: 0px 30px;
+height: 100%;
+width: 100%;
+}
+
+.ul {
+list-style: none;
+}
+
+.lista-carrinho img {
+width: 80px;
+}
+
+.principal img {
+width: 100%;
+border-bottom: outset 10px #A0522D;
+box-shadow: 2px 2px 2px 2px;
+}
+
+.imagens {
+position: relative;
+right: -400px;
+margin: 20px;
+text-transform:uppercase;
+}
+.titulo3 {
+margin: 10px;
+}
+
+.corte img {
+width: 100%;
+height: 300px;
+}
+
+.titulo-corte {
+text-transform: uppercase;
+text-align: center;
+font-size: 50px;
+}
+
+.container {
+background-image: url(gradient_1000_500.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+/*RODAPÉ*/
+.rodape {
+border-top: outset 10px #291b1b;
+margin: 0px;
+}
+
+/*IMAGENS DE FUNDO*/
+.background-rodape {
+position: absolute;
+width: 100%;
+height: 500%;
+background-image: url(gelatinho.jpeg);
+background-repeat: no-repeat;
+background-size: cover;
+z-index: -1;
+filter: blur(10px);
+margin: 0px;
+}
+
+
+/*IMAGENS CARDÁPIO*/
+.morango img {
+position: absolute;
+left: 200px;
+top: 1700px;
+border-radius: 10px;
+width: 400px;
+border: outset 2px #A0522D;
+box-shadow: 5px 5px 5px 5px;
+}
+
+.lavanda img {
+    position: absolute;
+    left: 1400px;
+    top: 2500px;
+    border-radius: 10px;
+    width: 400px;
+    border: outset 2px #A0522D;
+    box-shadow: 5px 5px 5px 5px;
+}
+
+/*NOMES SABORES*/
+.nome-morango {
+text-transform: uppercase;
+font-size: 40px;
+position: relative;
+right: -255px;
+top: 260px;
+color: #c70d3f;
+border: outset 5px #A0522D;
+background-color: #291b1b;
+padding: 5px;
+}
+
+.nome-lavanda {
+    text-transform: uppercase;
+    font-size: 40px;
+    position: relative;
+    right: -1423px;
+    top: 955px;
+    color: 	#6A5ACD;
+    border: outset 5px #A0522D;
+    background-color: #291b1b;
+    padding: 5px;
+}
