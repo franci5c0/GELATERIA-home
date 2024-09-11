@@ -7,13 +7,21 @@ box-sizing: border-box;
 :root {
 --Cyan: #00FFFF;
 --Turquoise: #40E0D0;
+--Violet: #EE82EE;
+--BlueViolet: #8A2BE2;
+--MediumSlateBlue: #7B68EE;
+--DarkTurquoise: #00CED1;
+--DeepSkyBlue: #00BFFF;
+--Fuchsia: #FF00FF;
+
 
 }
 
 /*LINHA DE SEPARAÇÃO*/
 hr {
-border: 1px solid #A0522D;
-box-shadow: 2px 2px;
+border: 1px outset var(--BlueViolet);
+box-shadow: 5px 5px 5px 5px;
+
 }
 
 .titulo-principal {
@@ -49,10 +57,11 @@ bottom: 110px;
 }
 
 .logo img {
-    width: 250px;
+    width: 200px;
     position: absolute;
     left: -800px;
     margin: 20px;
+    top: 15px;
     }
 
 
@@ -60,19 +69,43 @@ bottom: 110px;
 .main {
 background-image: url(/imagens/degrade-gelato.png);
 }
+
+.principal img {
+    width: 100%;
+    border-bottom: outset 10px #A0522D;
+    box-shadow: 2px 2px 2px 2px;
+    }
+
+/*SECTION-CORPO*/
+.container-section {
+width: 100%;
+border-bottom: 5px outset var(--BlueViolet);
+background-image: url(/imagens/degrade-gelato.png);
+}
+
+.sabores-geral {
+display: flex;
+}
+
+.sabores-geral img {
+width: 250px;
+margin: 63px;
+}
+
+.sabores-geral-2 {
+display: flex;
+}
+
+.sabores-geral-2 img {
+margin: 63px;
+width: 250px;
+}
+
+/*LISTA-CORPO*/
 .ul {
 list-style: none;
 }
 
-.lista-carrinho img {
-width: 80px;
-}
-
-.principal img {
-width: 100%;
-border-bottom: outset 10px #A0522D;
-box-shadow: 2px 2px 2px 2px;
-}
 
 .imagens {
 position: relative;
@@ -80,6 +113,7 @@ right: -400px;
 margin: 20px;
 text-transform:uppercase;
 }
+
 .titulo3 {
 margin: 10px;
 }
@@ -95,13 +129,8 @@ background-image: url(/imagens/degrade-gelato.png);
 }
 
 /*RODAPÉ*/
-.rodape {
-margin: 0px;
-max-width: 100%;
-max-height: 100%;
-}
 
-/*IMAGENS DE FUNDO*/
+/*IMAGENS DE FUNDO RODAPÉ*/
 .background-rodape img {
 width: 100%;
 }
@@ -109,6 +138,7 @@ width: 100%;
 .background-rodape {
 display: f;
 }
+
 .cardapio-imagem {
 filter: blur(8px);
 height: 500%;
@@ -116,34 +146,18 @@ height: 500%;
 
 /*IMAGENS CARDÁPIO*/
 .morango img {
-position: absolute;
-left: 200px;
-top: 1700px;
 border-radius: 10px;
-width: 400px;
-border: outset 2px #A0522D;
+width: 300px;
+border: outset 2px var(--Violet);
 box-shadow: 5px 5px 5px 5px;
 }
 
+
 .lavanda img {
-    position: absolute;
-    left: 1400px;
-    top: 2500px;
     border-radius: 10px;
-    width: 400px;
-    border: outset 2px #A0522D;
+    width: 300px;
+    border: outset 2px var(--BlueViolet);
     box-shadow: 5px 5px 5px 5px;
 }
 
-/*NOMES SABORES*/
-.nome-morango {
-    position: absolute;
-text-transform: uppercase;
-font-size: 40px;
-}
-
-.nome-lavanda {
-    position: absolute;
-    text-transform: uppercase;
-    font-size: 40px;
-}
+/*SPANS*/
