@@ -1,4 +1,5 @@
 
+
 * {
 margin: 0;
 box-sizing: border-box;
@@ -31,19 +32,20 @@ box-shadow: 5px 5px 5px 5px;
     box-shadow: 7px 7px;
 }
 
-/*TOPO*/
-
+/*CABEÇALHO*/
 .cabeçalho {
 background-image: url(/imagens/gradient_1000_500.png);
 background-repeat: no-repeat;
 background-size: cover;
 height: 150px;
+filter: grayscale(40%);
+filter: saturate(50%);
 }
 
 .titulo-principal {
     font-size: 40px;
     text-transform: uppercase;
-    font-family: "Bungee Tint";
+    font-family: "Rubik Mono One";
     text-align: center;
     position: relative;
     bottom: 80px;
@@ -54,6 +56,27 @@ width: 130px;
 position: relative;
 left: 200px;
 }
+
+.lista {
+position: absolute;
+list-style: none;
+
+}
+
+.carrinho { /*ÍCONE DO CARRINHO*/
+    width: 150px;
+    position: absolute;
+    left: 1450px;
+    bottom: 40px;
+}
+
+.contato { /*ÍCONE DE CONTATO*/
+    width: 150px;
+    position: absolute;
+    left: 1645px;
+    bottom: 40px;
+}
+
 
 /*CORPO*/
 .main {
@@ -73,8 +96,17 @@ border-bottom: 5px outset var(--BlueViolet);
 background-image: url(/imagens/degrade-gelato.png);
 }
 
+.titulo-sabores {
+text-align: center;
+font-size: 50px;
+}
+
 .sabores-geral {
 display: flex;
+text-align: center;
+text-transform: uppercase;
+font-size: 20px;
+font-family: "Concert One";
 }
 
 .sabores-geral img {
@@ -84,6 +116,11 @@ margin: 63px;
 
 .sabores-geral-2 {
 display: flex;
+text-align: center;
+text-transform: uppercase;
+font-size: 20px;
+margin-bottom: 30px;
+font-family: "Concert One";
 }
 
 .sabores-geral-2 img {
