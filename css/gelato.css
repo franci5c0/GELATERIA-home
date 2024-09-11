@@ -4,8 +4,11 @@ margin: 0;
 box-sizing: border-box;
 }
 
-/*TITULO PRINCIPAL*/
+:root {
+--Cyan: #00FFFF;
+--Turquoise: #40E0D0;
 
+}
 
 /*LINHA DE SEPARAÇÃO*/
 hr {
@@ -30,7 +33,7 @@ box-shadow: 2px 2px;
 /*TOPO*/
 .cabeçalho {
 width: 100%;
-background-image: url(gradient_1000_500.png);
+background-image: url(/imagens/degrade-gelato.png);
 background-size: 100%;
 background-position: 0px -420px;
 background-repeat: no-repeat;
@@ -54,17 +57,9 @@ bottom: 110px;
 
 
 /*CORPO*/
-body {
-background-repeat: no-repeat;
-margin: 0;
-padding: 0;
-/*background-image: url(/css/teste9.jpeg);*/
-background-size: 100%;
-background-position: 0px 30px;
-height: 100%;
-width: 100%;
+.main {
+background-image: url(/imagens/degrade-gelato.png);
 }
-
 .ul {
 list-style: none;
 }
@@ -94,36 +89,30 @@ width: 100%;
 height: 300px;
 }
 
-.titulo-corte {
-text-transform: uppercase;
-text-align: center;
-font-size: 50px;
+
+.titulo-corte-div {
+background-image: url(/imagens/degrade-gelato.png);
 }
 
-.container {
-background-image: url(gradient_1000_500.png);
-background-repeat: no-repeat;
-background-size: cover;
-}
 /*RODAPÉ*/
 .rodape {
-border-top: outset 10px #291b1b;
 margin: 0px;
+max-width: 100%;
+max-height: 100%;
 }
 
 /*IMAGENS DE FUNDO*/
-.background-rodape {
-position: absolute;
+.background-rodape img {
 width: 100%;
-height: 500%;
-background-image: url(gelatinho.jpeg);
-background-repeat: no-repeat;
-background-size: cover;
-z-index: -1;
-filter: blur(10px);
-margin: 0px;
 }
 
+.background-rodape {
+display: f;
+}
+.cardapio-imagem {
+filter: blur(8px);
+height: 500%;
+}
 
 /*IMAGENS CARDÁPIO*/
 .morango img {
@@ -148,25 +137,13 @@ box-shadow: 5px 5px 5px 5px;
 
 /*NOMES SABORES*/
 .nome-morango {
+    position: absolute;
 text-transform: uppercase;
 font-size: 40px;
-position: relative;
-right: -255px;
-top: 260px;
-color: #c70d3f;
-border: outset 5px #A0522D;
-background-color: #291b1b;
-padding: 5px;
 }
 
 .nome-lavanda {
+    position: absolute;
     text-transform: uppercase;
     font-size: 40px;
-    position: relative;
-    right: -1423px;
-    top: 955px;
-    color: 	#6A5ACD;
-    border: outset 5px #A0522D;
-    background-color: #291b1b;
-    padding: 5px;
 }
