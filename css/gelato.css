@@ -14,8 +14,7 @@ box-sizing: border-box;
 --DarkTurquoise: #00CED1;
 --DeepSkyBlue: #00BFFF;
 --Fuchsia: #FF00FF;
-
-
+--Crimson: #DC143C;
 }
 
 /*LINHA DE SEPARAÇÃO*/
@@ -34,12 +33,11 @@ box-shadow: 5px 5px 5px 5px;
 
 /*CABEÇALHO*/
 .cabeçalho {
-background-image: url(/imagens/gradient_1000_500.png);
+background-image: url(/css/gradient_1920_1080.png);
 background-repeat: no-repeat;
 background-size: cover;
 height: 150px;
-filter: grayscale(40%);
-filter: saturate(50%);
+filter: contrast(100%);
 }
 
 .titulo-principal {
@@ -79,21 +77,42 @@ list-style: none;
 
 
 /*CORPO*/
-.main {
-background-image: url(/imagens/degrade-gelato.png);
+
+.especialidade { /*IMAGEM DA ESPECIALIADADE NA SECTION PRINCIPAL*/
+width: 450px;
+position: absolute;
+left: 1400px;
+border: 5px outset var(--Crimson);
+box-shadow: 10px 10px 10px 10px;
+bottom: -190px;
 }
 
-.principal img {
+.fundo-principal { /*IMAGEM DE FUNDO PRINCIPAL*/
     width: 100%;
-    border-bottom: outset 10px var(--BlueViolet);
+    border-bottom: outset 10px var(--Crimson);
     box-shadow: 2px 2px 2px 2px;
     }
+
 
 /*SECTION-CORPO*/
 .container-section {
 width: 100%;
-border-bottom: 5px outset var(--BlueViolet);
-background-image: url(/imagens/degrade-gelato.png);
+border-bottom: 5px outset var(--Crimson);
+background-image: url(/css/gradiante-cardapio.png);
+}
+
+.strong { /*COMENTÁRIO DA IMAGEM DE ESPECIALIDADE*/
+    text-transform: uppercase;
+    font-size: 40px;
+    position: absolute;
+    color: var(--Turquoise);
+    font-family: "Concert One";
+    left: 1422px;
+    top: 250px;
+}
+
+.imagem-fundo-principal {
+    float: inline-end;
 }
 
 .titulo-sabores {
@@ -101,7 +120,8 @@ text-align: center;
 font-size: 50px;
 }
 
-.sabores-geral {
+
+.sabores-geral { /*PRIMEIRA FILEIRA DE SABORES*/
 display: flex;
 text-align: center;
 text-transform: uppercase;
@@ -109,12 +129,14 @@ font-size: 20px;
 font-family: "Concert One";
 }
 
-.sabores-geral img {
+.sabores-geral img { /*IMAGENS DA PRIMEIRA FILEIRA DE SABORES*/
 width: 250px;
-margin: 63px;
+margin: 67px;
+border: outset 5px var(--Crimson);
+box-shadow: 5px 5px 5px 5px;
 }
 
-.sabores-geral-2 {
+.sabores-geral-2 { /*SEGUNDA FILEIRA DE SABORES*/
 display: flex;
 text-align: center;
 text-transform: uppercase;
@@ -123,9 +145,11 @@ margin-bottom: 30px;
 font-family: "Concert One";
 }
 
-.sabores-geral-2 img {
+.sabores-geral-2 img { /*IMAGENS DA SEGUNDA FILEIRA DE SABORES*/
 margin: 63px;
 width: 250px;
+border: outset 5px var(--Crimson);
+box-shadow: 5px 5px 5px 5px;
 }
 
 /*LISTA-CORPO*/
@@ -150,10 +174,6 @@ width: 100%;
 height: 300px;
 }
 
-
-.titulo-corte-div {
-background-image: url(/imagens/degrade-gelato.png);
-}
 
 /*RODAPÉ*/
 
