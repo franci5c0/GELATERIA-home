@@ -1,5 +1,3 @@
-
-
 * {
 margin: 0;
 box-sizing: border-box;
@@ -15,19 +13,16 @@ box-sizing: border-box;
 --DeepSkyBlue: #00BFFF;
 --Fuchsia: #FF00FF;
 --Crimson: #DC143C;
+--DarkMagenta: #8B008B;
+--Chocolate: #D2691E;
+--DarkRed: #8B0000;
 }
 
 /*LINHA DE SEPARAÇÃO*/
 hr {
-border: 1px outset var(--BlueViolet);
+border: 3px outset var(--Crimson);
 box-shadow: 5px 5px 5px 5px;
 margin: 0px;
-}
-
-
-.hr {
-border: 1px solid #A0522D;
-box-shadow: 7px 7px;
 }
 
 /*CABEÇALHO*/
@@ -35,7 +30,7 @@ box-shadow: 7px 7px;
 background-image: url(/css/gradient_1920_1080.png);
 background-repeat: no-repeat;
 background-size: cover;
-filter: contrast(250%);
+filter: contrast(210%);
 }
 
 .titulo-principal {
@@ -57,7 +52,6 @@ top: 30px;
 .imagem-logo { /*EDIÇÃO DA LOGO*/
 filter: contrast(30%);
 }
-
 
 .lista {
 list-style: none;
@@ -81,9 +75,7 @@ top: 30px;
     filter: contrast(30%);
 }
 
-
 /*CORPO*/
-
 .strong { /*COMENTÁRIO DA IMAGEM DE ESPECIALIDADE*/
     text-transform: uppercase;
     font-size: 40px;
@@ -110,6 +102,33 @@ box-shadow: 2px 2px 2px 2px;
 margin: 0px;
 }
 
+.titulo-sobre { /*TITULO DO SOBRE*/
+text-transform: uppercase;
+position: absolute;
+top: 600px;
+left: 50px;
+font-size: 50px;
+color: var(--Chocolate);
+background-color: var(--DarkRed);
+border-radius: 10px;
+box-shadow: 5px 5px 5px 5px;
+}
+
+.sobre-texto {
+position: absolute;
+font-size: 40px;
+top: 300px;
+color: var(--Chocolate);
+background-color: var(--DarkRed);
+}
+
+.sobre-texto-2 {
+position: absolute;
+font-size: 40px;
+top: 250px;
+color: var(--Chocolate);
+background-color: var(--DarkRed);
+}
 
 /*SECTION-CORPO*/
 .container-section {
@@ -118,7 +137,6 @@ border-bottom: 5px outset var(--Crimson);
 background-image: url(/css/gradiante-cardapio.png);
 }
 
-/*SABORES*/
 .titulo-sabores {
 text-align: center;
 font-size: 50px;
@@ -159,44 +177,8 @@ border: outset 5px var(--Crimson);
 box-shadow: 5px 5px 5px 5px;
 }
 
-/*LISTA-CORPO*/
-.ul {
-list-style: none;
-}
-
-
-.imagens {
-position: relative;
-right: -400px;
-margin: 20px;
-text-transform:uppercase;
-}
-
-.titulo3 {
-margin: 10px;
-}
-
-.corte img {
-width: 100%;
-height: 300px;
-}
-
 
 /*RODAPÉ*/
-
-/*IMAGENS DE FUNDO RODAPÉ*/
-.background-rodape img {
-width: 100%;
-}
-
-.background-rodape {
-display: f;
-}
-
-.cardapio-imagem {
-filter: blur(8px);
-height: 500%;
-}
 
 /*IMAGENS CARDÁPIO*/
 .morango img {
@@ -213,4 +195,15 @@ box-shadow: 5px 5px 5px 5px;
     box-shadow: 5px 5px 5px 5px;
 }
 
+/*FOOTER*/
+.icone-rodape { /*DIV DO ICONE DO INSTAGRAM*/
+position: relative;
+}
 
+.instagram { /*IMAGEM DO ICONE DO INSTAGRAM*/
+width: 400px;
+}
+
+.edicao-rodape {
+background-image: url(/css/gradient-rodape.png);
+}
