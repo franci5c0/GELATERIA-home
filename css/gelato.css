@@ -16,30 +16,34 @@ box-sizing: border-box;
 --DarkMagenta: #8B008B;
 --Chocolate: #D2691E;
 --DarkRed: #8B0000;
+--Plum: #DDA0DD;
 }
 
 /*LINHA DE SEPARAÇÃO*/
 hr {
-border: 3px outset var(--Crimson);
+border: 3px outset var(--DarkRed);
 box-shadow: 5px 5px 5px 5px;
 margin: 0px;
 }
 
 /*CABEÇALHO*/
 .cabeçalho {
-background-image: url(/css/gradient_1920_1080.png);
+background-image: url(/css/fundo-topo-rodape.png);
 background-repeat: no-repeat;
 background-size: cover;
-filter: contrast(210%);
+filter: contrast(160%);
 }
 
 .titulo-principal {
-font-size: 40px;
-text-transform: uppercase;
-font-family: "Rubik Mono One";
+font-size: 60px;
+font-weight: 100;
+font-family: "Pacifico";
 text-align: center;
 position: relative;
-bottom: 80px;
+bottom: 70px;
+color: rgb(255, 208, 0);
+ text-shadow: 10px 1px 20px rgb(250, 63, 141), 0 0 1em rgb(255, 0, 0), 0 0 0.2em rgba(255, 0, 0, 0.589); 
+filter: drop-shadow(1px 2px 10px rgb(255, 88, 241) );
  }
 
 .logo { /*IMAGEM DA LOGO*/
@@ -60,30 +64,34 @@ top: 30px;
 }
 
 .carrinho { /*ÍCONE DO CARRINHO*/
-    width: 150px;
-    position: absolute;
-    left: 1450px;
-    bottom: 40px;
-    filter: contrast(30%);
+width: 150px;
+position: absolute;
+left: 1450px;
+bottom: 40px;
+filter: contrast(30%);
 }
 
 .contato { /*ÍCONE DE CONTATO*/
-    width: 150px;
-    position: absolute;
-    left: 1645px;
-    bottom: 40px;
-    filter: contrast(30%);
+width: 150px;
+position: absolute;
+left: 1645px;
+bottom: 40px;
+filter: contrast(30%);
 }
 
 /*CORPO*/
 .strong { /*COMENTÁRIO DA IMAGEM DE ESPECIALIDADE*/
-    text-transform: uppercase;
-    font-size: 40px;
-    position: absolute;
-    color: var(--Turquoise);
-    font-family: "Concert One";
-    left: 1422px;
-    top: 280px;
+text-transform: uppercase;
+font-size: 40px;
+position: absolute;
+font-family: "Concert One";
+left: 1415px;
+top: 350px;
+background-color: var(--Chocolate);
+color: var(--Cyan);
+border-radius: 10px;
+box-shadow: 5px 5px 5px 5px black;
+padding: 5px;
 }
 
 .especialidade { /*IMAGEM DA ESPECIALIADADE NA SECTION PRINCIPAL*/
@@ -92,7 +100,7 @@ position: absolute;
 left: 1400px;
 border: 5px outset var(--Crimson);
 box-shadow: 10px 10px 10px 10px;
-bottom: -250px;
+bottom: -290px;
 }
 
 .fundo-principal { /*IMAGEM DE FUNDO PRINCIPAL*/
@@ -105,8 +113,8 @@ margin: 0px;
 .titulo-sobre { /*TITULO DO SOBRE*/
 text-transform: uppercase;
 position: absolute;
-top: 600px;
-left: 50px;
+top: 355px;
+left: 60px;
 font-size: 50px;
 color: var(--Chocolate);
 background-color: var(--DarkRed);
@@ -114,21 +122,7 @@ border-radius: 10px;
 box-shadow: 5px 5px 5px 5px;
 }
 
-.sobre-texto {
-position: absolute;
-font-size: 40px;
-top: 300px;
-color: var(--Chocolate);
-background-color: var(--DarkRed);
-}
 
-.sobre-texto-2 {
-position: absolute;
-font-size: 40px;
-top: 250px;
-color: var(--Chocolate);
-background-color: var(--DarkRed);
-}
 
 /*SECTION-CORPO*/
 .container-section {
@@ -152,7 +146,7 @@ font-family: "Concert One";
 
 .sabores-geral img { /*IMAGENS DA PRIMEIRA FILEIRA DE SABORES*/
 width: 250px;
-margin: 70px;
+margin: 66px;
 border: outset 5px var(--Crimson);
 box-shadow: 5px 5px 5px 5px;
 }
@@ -180,21 +174,6 @@ box-shadow: 5px 5px 5px 5px;
 
 /*RODAPÉ*/
 
-/*IMAGENS CARDÁPIO*/
-.morango img {
-border-radius: 10px;
-width: 300px;
-border: outset 2px var(--Violet);
-box-shadow: 5px 5px 5px 5px;
-}
-
-.lavanda img {
-    border-radius: 10px;
-    width: 300px;
-    border: outset 2px var(--BlueViolet);
-    box-shadow: 5px 5px 5px 5px;
-}
-
 /*FOOTER*/
 .icone-rodape { /*DIV DO ICONE DO INSTAGRAM*/
 position: relative;
@@ -205,5 +184,8 @@ width: 400px;
 }
 
 .edicao-rodape {
-background-image: url(/css/gradient-rodape.png);
+background-image: url(/css/fundo-topo-rodape.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 0px -400px;
 }
