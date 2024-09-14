@@ -17,6 +17,7 @@ box-sizing: border-box;
 --Chocolate: #D2691E;
 --DarkRed: #8B0000;
 --Plum: #DDA0DD;
+--SandyBrown: #F4A460;
 }
 
 /*LINHA DE SEPARAÇÃO*/
@@ -57,7 +58,7 @@ top: 30px;
 filter: contrast(30%);
 }
 
-.lista {
+.lista { /*LISTA DOS ÍCONES DO CABEÇALHO*/
 list-style: none;
 position: relative;
 top: 30px;
@@ -122,12 +123,7 @@ border-radius: 10px;
 box-shadow: 5px 5px 5px 5px;
 }
 
-.sobre-nos {
-position: absolute;
-top: 500px;
-font-size: 30px;
-color: var(--Turquoise);
-}
+
 
 /*SECTION-CORPO*/
 .container-section { /*SESSÃO DO <MAIN>*/
