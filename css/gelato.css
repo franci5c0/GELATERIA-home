@@ -34,7 +34,7 @@ background-size: cover;
 filter: contrast(160%);
 }
 
-.titulo-principal {
+.titulo-principal { /*H1*/
 font-size: 60px;
 font-weight: 100;
 font-family: "Pacifico";
@@ -122,16 +122,21 @@ border-radius: 10px;
 box-shadow: 5px 5px 5px 5px;
 }
 
-
+.sobre-nos {
+position: absolute;
+top: 500px;
+font-size: 30px;
+color: var(--Turquoise);
+}
 
 /*SECTION-CORPO*/
-.container-section {
+.container-section { /*SESSÃO DO <MAIN>*/
 width: 100%;
 border-bottom: 5px outset var(--Crimson);
 background-image: url(/css/gradiante-cardapio.png);
 }
 
-.titulo-sabores {
+.titulo-sabores { /*TITULO DO CARDÁPIO*/
 text-align: center;
 font-size: 50px;
 }
@@ -171,6 +176,20 @@ border: outset 5px var(--Crimson);
 box-shadow: 5px 5px 5px 5px;
 }
 
+.sabores-geral-3 {
+display: flex;
+text-align: center;
+text-transform: uppercase;
+font-size: 20px;
+font-family: "Concert One";
+}
+
+.sabores-geral-3 img {
+width: 250px;
+margin: 66px;
+border: outset 5px var(--Crimson);
+box-shadow: 5px 5px 5px 5px;
+}
 
 /*RODAPÉ*/
 
@@ -188,4 +207,5 @@ background-image: url(/css/fundo-topo-rodape.png);
 background-repeat: no-repeat;
 background-size: cover;
 background-position: 0px -400px;
+filter: contrast(160%);
 }
