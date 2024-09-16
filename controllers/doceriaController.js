@@ -72,7 +72,7 @@ const getAllBolos = (req, res) => {
 
 //função para obter todos os pedidos
 const getAllPedidos = (req, res) => {
-    db.query('SELECT * FROM pedidos', (err, results) => {
+    db.quer('SELECT * FROM pedidos', (err, results) => {
 
         if (err) {
             console.error('Erro ao obter os pedidos')

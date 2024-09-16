@@ -60,7 +60,7 @@ app.get('/',(req, res) => {
 
 
 //configura o servidor para executar uma porta específica
-const PORT = process.env.PORT || 5000; //define a porta a partir da variável de ambiente ou usa a porta 3000 como padrão
+const PORT = process.env.PORT || 3000; //define a porta a partir da variável de ambiente ou usa a porta 3000 como padrão
 app.listen(PORT, () => {
    console.log(`Servidor rodando na porta ${PORT}`) 
 }); //escreve uma mensagem informando que o servidor está rodando
