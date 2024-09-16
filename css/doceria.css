@@ -85,31 +85,6 @@ filter: contrast(30%);
 }
 
 /*CORPO*/
-.strong { /*COMENTÁRIO DA IMAGEM DE ESPECIALIDADE*/
-text-transform: uppercase;
-font-size: 40px;
-position: absolute;
-font-family: "Concert One";
-left: 1415px;
-top: 350px;
-background-color: var(--Chocolate);
-color: var(--gold);
-border-radius: 10px;
-box-shadow: 5px 5px 5px 5px black;
-padding: 5px;
-text-shadow: 5px 5px 5px rgb(0, 0, 0), 0 0 1em rgb(255, 166, 0), 0 0 0.2em rgba(0, 0, 0, 0.589); 
-
-}
-
-.especialidade { /*IMAGEM DA ESPECIALIADADE NA SECTION PRINCIPAL*/
-width: 450px;
-position: absolute;
-left: 1400px;
-border: 5px outset var(--Crimson);
-box-shadow: 10px 10px 10px 10px;
-bottom: -290px;
-}
-
 .fundo-principal { /*IMAGEM DE FUNDO PRINCIPAL*/
 width: 100%;
 height: 900px;
@@ -120,80 +95,59 @@ margin: 0px;
 
 .botao-cardapio { /*BOTÃO QUE LEVA PRO CARDÁPIO*/
 position: absolute;
-top: 500px;
-margin: 50px;
-margin-left: 80px;
-width: 250px;
-height: 60px;
+top: 400px;
+left: 200px;
+width: 300px;
+height: 80px;
 border-radius: 10px;
-background-color: var(--RosyBrown);
+background-color: var(--SandyBrown);
 font-size: 20px;
 text-transform: uppercase;
 box-shadow: 5px 5px 5px 5px;
+cursor: pointer;
 }
 
-
-/*SECTION-CORPO*/
-.container-section { /*SESSÃO DO <MAIN>*/
-width: 100%;
-border-bottom: 5px outset var(--Crimson);
-background-image: url(/css/gradiante-cardapio.png);
-}
-
-.titulo-sabores { /*TITULO DO CARDÁPIO*/
-text-align: center;
-font-size: 50px;
-}
-
-.sabores-geral { /*PRIMEIRA FILEIRA DE SABORES*/
-display: flex;
-text-align: center;
-text-transform: uppercase;
+.botao-contato {
+position: absolute;
+top: 550px;
+left: 200px;
+width: 300px;
+height: 80px;
+border-radius: 10px;
+background-color: var(--SandyBrown);
 font-size: 20px;
-font-family: "Concert One";
-}
-
-.sabores-geral img { /*IMAGENS DA PRIMEIRA FILEIRA DE SABORES*/
-width: 250px;
-margin: 66px;
-border: outset 5px var(--Crimson);
-box-shadow: 5px 5px 5px 5px;
-}
-
-.blues { /*BLUES DE MEMPHIS GELATO*/
-margin-left: -10px;
-}
-
-.sabores-geral-2 { /*SEGUNDA FILEIRA DE SABORES*/
-display: flex;
-text-align: center;
 text-transform: uppercase;
-font-size: 20px;
-margin-bottom: 30px;
-font-family: "Concert One";
-}
-
-.sabores-geral-2 img { /*IMAGENS DA SEGUNDA FILEIRA DE SABORES*/
-margin: 63px;
-width: 250px;
-border: outset 5px var(--Crimson);
 box-shadow: 5px 5px 5px 5px;
+cursor: pointer;
 }
 
-.sabores-geral-3 {
-display: flex;
-text-align: center;
+.botao-carrinho {
+position: absolute;
+top: 700px;
+left: 200px;
+width: 300px;
+height: 80px;
+border-radius: 10px;
+background-color: var(--SandyBrown);
+font-size: 20px;
 text-transform: uppercase;
-font-size: 20px;
-font-family: "Concert One";
+box-shadow: 5px 5px 5px 5px;
+cursor: pointer;
 }
 
-.sabores-geral-3 img {
-width: 250px;
-margin: 66px;
-border: outset 5px var(--Crimson);
-box-shadow: 5px 5px 5px 5px;
+/*HOVER - TRANSIÇÕES*/
+.botao-cardapio:hover {
+transform: scale(1.2);
 }
+
+.botao-contato:hover {
+transform: scale(1.2);
+}
+
+.botao-carrinho:hover {
+transform: scale(1.2);
+}
+
 
 /*RODAPÉ*/
 
