@@ -29,4 +29,3 @@ if(err) {
         console.log(`Conectado ao banco de dados MySQL ${process.env.DB_NAME}`);//exibe mensagem de sucesso
     }
 );
-

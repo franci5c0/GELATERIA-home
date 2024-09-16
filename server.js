@@ -24,14 +24,13 @@ const pedidosRoutes = require('./routes/pedidos'); //importa as rotas dos pedido
 const cadastroRoutes = require('./routes/cadastro'); //importa as rotas do cadastro
 
 //SABORES--------------//
-const saboresRoutes = require('./routes/sabores'); //importa as rotas dos sabores
+const bolosRoutes = require('./routes/bolos'); //importa as rotas dos sabores
 
 //CARRINHO------------//
 const carrinhoRoutes = require('./routes/carrinho'); //importa as rotas do carrinho
 
 //PAGAMENTO------------//
 const pagamentoRoutes = require('./routes/pagamento'); //importa as rotas do pagamento
-
 
 
 //configura o CORS e o body-parser
@@ -49,19 +48,19 @@ app.use('/api/carrinho', carrinhoRoutes)
 app.use('/api/cadastro', cadastroRoutes)
 
 //usar as rotas de transações para todas as requisições que começam com /api/sabores
-app.use('/api/sabores', saboresRoutes)
+app.use('/api/bolos', bolosRoutes)
 
 //usar as rotas de transações para todas as requisições que começam com /api/pagamento
 app.use('/api/pagamento', pagamentoRoutes)
 
 //rota inicial para testar servidor
 app.get('/',(req, res) => {
-    res.send('A gelateria tá aberta');//define uma rota inicial para testar o servidor
+    res.send('A doceria tá aberta');//define uma rota inicial para testar o servidor
 });
 
 
 //configura o servidor para executar uma porta específica
-const PORT = process.env.PORT || 3000; //define a porta a partir da variável de ambiente ou usa a porta 3000 como padrão
+const PORT = process.env.PORT || 5000; //define a porta a partir da variável de ambiente ou usa a porta 3000 como padrão
 app.listen(PORT, () => {
    console.log(`Servidor rodando na porta ${PORT}`) 
 }); //escreve uma mensagem informando que o servidor está rodando

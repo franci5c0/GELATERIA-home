@@ -51,15 +51,15 @@ const getAllCadastro = (req, res) => {
 };
 
 
-//SABORES//
+//BOLOS//
 
-//função para obter todos os pedidos
-const getAllSabores = (req, res) => {
-    db.query('SELECT * FROM sabores', (err, results) => {
-  
+//função para obter todos os bolos
+const getAllBolos = (req, res) => {
+    db.query('SELECT * FROM bolos', (err, results) => {
+
         if (err) {
-            console.error('Erro ao obter os pedidos')
-            res.status(500).send('Erro ao obter os pedidos');
+            console.error('Erro ao obter os bolos')
+            res.status(500).send('Erro ao obter os bolos');
             return;
         }
         res.json(results);
@@ -118,7 +118,7 @@ const addPedidos = (req, res) => {
 
 //--CARRINHO--//
 
-//função para obter todos os pedidos
+//função para obter todos os pedidos do carrinho
 const getAllCarrinho = (req, res) => {
     db.query('SELECT * FROM carrinho', (err, results) => {
 
@@ -132,7 +132,7 @@ const getAllCarrinho = (req, res) => {
 };
 
 
-// Função para adicionar um novo pedido
+// Função para adicionar um novo pedido ao carrinho
 const addCarrinho = (req, res) => { 
     const { id, sabor, quantidade, preço} = req.body; 
     db.query( 
@@ -151,7 +151,7 @@ const addCarrinho = (req, res) => {
 
 
 
-    //função para deletar um pedido
+    //função para deletar um pedido do carrinho
     const deleteCarrinho = (req, res) => {  
         const { id } = req.params;
         db.query('DELETE FROM carrinho WHERE id = ?', [id], (err, results) => {
@@ -167,7 +167,7 @@ const addCarrinho = (req, res) => {
     
     //PAGAMENTO//
 
-    //função para obter todos os pedidos
+    //função para obter todos os pagamentos
 const getAllPagamento = (req, res) => {
   db.query('SELECT * FROM pagamento', (err, results) => {
 
@@ -181,7 +181,7 @@ const getAllPagamento = (req, res) => {
 };
 
 
-// Função para adicionar um novo pedido
+// Função para adicionar um novo pagamento
 const addPagamento = (req, res) => { 
   const { id, PIX} = req.body; 
   db.query( 
@@ -200,7 +200,7 @@ const addPagamento = (req, res) => {
 
 
 
-  //função para deletar um pedido
+  //função para deletar um pagamento
   const deletePagamento = (req, res) => {  
       const { id } = req.params;
       db.query('DELETE FROM pagamento WHERE id = ?', [id], (err, results) => {
@@ -219,7 +219,7 @@ const addPagamento = (req, res) => {
     module.exports = {
         addCadastro,
         getAllCadastro,
-        getAllSabores,
+        getAllBolos,
         getAllPedidos,
         addPedidos,
         addCarrinho,
