@@ -17,6 +17,11 @@ box-sizing: border-box;
 --Chocolate: #D2691E;
 --DarkRed: #8B0000;
 --Plum: #DDA0DD;
+--gold: #FFD700;
+--DarkOrange: #FF8C00;
+--Brown: #A52A2A;
+--Sienna: #A0522D;
+--RosyBrown: #BC8F8F;	
 }
 
 /*LINHA DE SEPARAÇÃO*/
@@ -88,10 +93,12 @@ font-family: "Concert One";
 left: 1415px;
 top: 350px;
 background-color: var(--Chocolate);
-color: var(--Cyan);
+color: var(--gold);
 border-radius: 10px;
 box-shadow: 5px 5px 5px 5px black;
 padding: 5px;
+text-shadow: 5px 5px 5px rgb(0, 0, 0), 0 0 1em rgb(255, 166, 0), 0 0 0.2em rgba(0, 0, 0, 0.589); 
+
 }
 
 .especialidade { /*IMAGEM DA ESPECIALIADADE NA SECTION PRINCIPAL*/
@@ -110,18 +117,19 @@ box-shadow: 2px 2px 2px 2px;
 margin: 0px;
 }
 
-.titulo-sobre { /*TITULO DO SOBRE*/
-text-transform: uppercase;
+.botao-cardapio { /*BOTÃO QUE LEVA PRO CARDÁPIO*/
 position: absolute;
-top: 355px;
-left: 60px;
-font-size: 50px;
-color: var(--Chocolate);
-background-color: var(--DarkRed);
+top: 500px;
+margin: 50px;
+margin-left: 80px;
+width: 250px;
+height: 60px;
 border-radius: 10px;
+background-color: var(--RosyBrown);
+font-size: 20px;
+text-transform: uppercase;
 box-shadow: 5px 5px 5px 5px;
 }
-
 
 
 /*SECTION-CORPO*/

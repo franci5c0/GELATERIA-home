@@ -1,16 +1,18 @@
+//importar bibliotecas
+const express = require('express');
 
 //inicie com dotenv
 const dotenv = require('dotenv'); //importa o pacote dotenv para gerenciar variáveis de ambiente
 
+//importar pacotes
+const cors = require ('cors'); //importa o pacote cors para permitir requisições de diferentes origens
+const bodyParser = require('body-parser') //importa o pacote body-parser para analisar o corpo das requisições
 
 //variáveis de ambiente
 dotenv.config(); //carrega as variáveis definidas no arquivo .env para process.env
 
-
-//importar bibliotecas
-const express = require('express');
-const cors = require ('cors'); //importa o pacote cors para permitir requisições de diferentes origens
-const bodyParser = require('body-parser') //importa o pacote body-parser para analisar o corpo das requisições
+//inicializa uma nova aplicação express
+const app = express();
 
 //conectando o banco de dados
 const db = require('./config/db');//importa a conexão com o banco de dados
@@ -30,12 +32,12 @@ const carrinhoRoutes = require('./routes/carrinho'); //importa as rotas do carri
 //PAGAMENTO------------//
 const pagamentoRoutes = require('./routes/pagamento'); //importa as rotas do pagamento
 
-//inicializa uma nova aplicação express
-const app = express();
+
 
 //configura o CORS e o body-parser
 app.use(cors()); //configura o body-parser para analisar requisições JSON
 app.use(bodyParser.json());//configura o body-parser para analisar requisições JSON
+
 
 //usar as rotas de transações para todas as requisições que começam com /api/pedidos
 app.use('/api/pedidos', pedidosRoutes)
