@@ -52,14 +52,10 @@ filter: drop-shadow(5px 0px 10px rgb(233, 187, 36) );
  }
 
 .logo { /*IMAGEM DA LOGO*/
-width: 130px;
+width: 150px;
 position: relative;
 left: 200px;
 top: 30px;
-}
-
-.imagem-logo { /*EDIÇÃO DA LOGO*/
-filter: contrast(30%);
 }
 
 .lista { /*LISTA DOS ÍCONES DO CABEÇALHO*/
@@ -68,20 +64,20 @@ position: relative;
 top: 30px;
 }
 
+
 .carrinho { /*ÍCONE DO CARRINHO*/
-width: 150px;
+width: 100px;
 position: absolute;
-left: 1450px;
-bottom: 40px;
-filter: contrast(30%);
+left: 1400px;
+bottom: 88px;
 }
 
 .contato { /*ÍCONE DE CONTATO*/
-width: 150px;
+width: 70px;
 position: absolute;
 left: 1645px;
-bottom: 40px;
-filter: contrast(30%);
+bottom: 77px;
+
 }
 
 /*CORPO*/
@@ -93,9 +89,10 @@ box-shadow: 2px 2px 2px 2px;
 margin: 0px;
 }
 
+
 .botao-cardapio { /*BOTÃO QUE LEVA PRO CARDÁPIO*/
 position: absolute;
-top: 400px;
+top: 450px;
 left: 200px;
 width: 300px;
 height: 80px;
@@ -109,7 +106,7 @@ cursor: pointer;
 
 .botao-contato {
 position: absolute;
-top: 550px;
+top: 650px;
 left: 200px;
 width: 300px;
 height: 80px;
@@ -123,7 +120,7 @@ cursor: pointer;
 
 .botao-carrinho {
 position: absolute;
-top: 700px;
+top: 850px;
 left: 200px;
 width: 300px;
 height: 80px;
@@ -165,5 +162,9 @@ background-image: url(/css/confeitaria-topo.png);
 background-repeat: no-repeat;
 background-size: cover;
 background-position: 0px -400px;
-filter: contrast(110%);
+}
+
+.forma-pagamento {
+font-size: 30px;
+
 }

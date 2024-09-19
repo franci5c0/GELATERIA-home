@@ -79,7 +79,6 @@ const deletePedidos = (req, res) => {
   }); 
 }; 
 
-
 module.exports = {
 getAllBolos,
 getAllPedidos,
