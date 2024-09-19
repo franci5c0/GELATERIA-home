@@ -5,6 +5,5 @@ const doceriaController=require('../controllers/doceriaController')//importa o c
 //DEFININDO UMA ROTA PARA OBTER TODOS OS BOLOS DA TABELA
 router.get('/', doceriaController.getAllBolos);
 
-
 //EXPORTANDO O ROTEADOR
 module.exports=router;

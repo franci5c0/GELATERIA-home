@@ -15,9 +15,11 @@ const cors = require('cors');//importa o pacote cors para permitir requisições
 //importando e armazenando o body-parser na constante bodyParser
 const bodyParser = require('body-parser');//importa o pacote body-parser para analisar o corpo das requisições HTTP
 
-
 const db = require('./config/db');//importa a conexão com o banco de dados
-    const boloRoutes = require('./routes/bolos');//importa a rota da tabela de bolos
+
+const boloRoutes = require('./routes/bolos');//importa a rota da tabela de bolos
+
+const pedidosRoutes = require('./routes/pedidos')//importa a rota da tabela de pedidos
 
 //ANOTAÇÕES//
 
@@ -31,19 +33,18 @@ const db = require('./config/db');//importa a conexão com o banco de dados
 //CONFIGURANDO AS VARIÁVEIS DE AMBIENTE
 dotenv.config();//carrega as variáveis definidas no arquivo .env para process.env
 
-
 //INICIALIZANDO UMA NOVA APLICAÇÃO EXPRESS
 const app = express();//inicializa uma nova aplicação express
-
 
 //CONFIGURANDO O CORS E O BODY-PARSER
 app.use(cors());//habilita o CORS para todas as rotas
 app.use(bodyParser.json());//configura o body-parser para analisar requisições JSON
 
-
 //usar as rotas da tabela para todas as requisições que começam com /api/bolos
 app.use('/api/bolos', boloRoutes);
 
+//usar tas rotas da tabela de pedidos para todas as requisições que começam com /api/pedidos
+app.use('/api/pedidos', pedidosRoutes);
 
 //ROTA INICIAL PARA TESTAR O SERVIDOR
 app.get('/',(req, res) => {
