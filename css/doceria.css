@@ -23,10 +23,12 @@ box-sizing: border-box;
 --Sienna: #A0522D;
 --RosyBrown: #BC8F8F;	
 --SandyBrown: #F4A460;
+--SaddleBrown: #8B4513;
+--Black: #000000;
 }
 
 /*LINHA DE SEPARAÇÃO*/
-hr {
+.hr {
 border: 3px outset var(--DarkOrange);
 margin: 0px;
 }
@@ -165,6 +167,229 @@ background-position: 0px -400px;
 }
 
 .forma-pagamento {
-font-size: 30px;
+font-size: 60px;
+font-family: "Dancing Script";
+color: var(--gold);
+position: absolute;
+left: 400px;
+bottom: 120px;
+}
 
+.pix {
+position: absolute;
+left: 580px;
+width: 70px;
+bottom: 30px;
+}
+
+
+
+/*REDE SOCIAL*/
+/*GERAL*/
+.corpo-social {
+background-image: url(/css/gradiante-cardapio.png);
+}
+
+/*TOPO*/
+.topo-social {
+width: 100%;
+position: absolute;
+border-right: 2px outset var(--Brown);
+background-image: url(/css/gradiante-social.png);
+background-repeat: no-repeat;
+background-size: cover;
+border-bottom: outset 5px var(--Crimson);
+box-shadow: 0px 2px 7px 2px;
+}
+
+.divisao-social {
+width: 100%;
+border: 2px outset var(--DarkOrange);
+margin: 0px;
+}
+
+.topo-div-social img{
+width: 100px;
+border-radius: 70px;
+border: outset 4px var(--DarkMagenta);
+margin: 30px;
+position: relative;
+left: 380px;
+}
+
+.nome-perfil-1 {
+font-size: 25px;
+position: absolute;
+left: 412px;
+top: 130px;
+}
+
+.nome-perfil-2 {
+font-size: 25px;
+position: absolute;
+left: 580px;
+top: 130px;
+}
+
+.nome-perfil-3 {
+font-size: 25px;
+position: absolute;
+left: 757px;
+top: 130px;
+}
+
+.nome-perfil-4 {
+font-size: 25px;
+position: absolute;
+left: 909px;
+top: 130px;
+}
+
+.nome-perfil-5 {
+font-size: 25px;
+position: absolute;
+left: 1084px;
+top: 130px;
+}
+
+.nome-perfil-6 {
+font-size: 25px;
+position: absolute;
+left: 1254px;
+top: 130px;
+}
+
+.nome-perfil-7 {
+font-size: 25px;
+position: absolute;
+left: 1400px;
+top: 130px;
+}
+
+.nome-perfil-8 {
+font-size: 25px;
+position: absolute;
+left: 1574px;
+top: 130px;
+}
+
+.nome-perfil-9 {
+font-size: 25px;
+position: absolute;
+left: 1722px;
+top: 130px
+}
+
+
+
+/*CORPO*/
+.icones-social-aba {
+width: 335px;
+height: 1000px;
+border-right: outset 3px var(--Crimson);
+box-shadow: 2px 1px 8px 0px;
+position: fixed
+}
+
+.titulo-aba-social {
+position: absolute;
+font-size: 60px;
+left: 70px;
+top: 60px;
+font-family: "Lobster";
+}
+
+.icone-social-aba-1 {
+position: absolute;
+top: 199px;
+left: 35px;
+}
+
+.titulo-icone-aba-1 {
+position: absolute;
+font-size: 30px;
+top: 214px;
+left: 90px;
+color: var(--Black);
+}
+
+.icone-social-aba-2 {
+position: absolute;
+top: 350px;
+left: 35px;
+}
+
+.titulo-icone-aba-2 {
+position: absolute;
+font-size: 30px;
+top: 355px;
+left: 110px;
+color: var(--Black);
+}
+
+.icone-social-aba-3 {
+position: absolute;
+top: 500px;
+left: 24px;
+}
+
+.titulo-icone-aba-3 {
+position: absolute;
+font-size: 30px;
+top: 515px;
+left: 100px;
+color: var(--Black);
+}
+
+.icone-social-aba-4 {
+position: absolute;
+top: 670px;
+left: 24px;
+width: 100px;
+border-radius: 30px;
+border: outset 3px var(--DarkMagenta);
+box-shadow: 2px 2px 2px 2px;
+}
+    
+.titulo-icone-aba-4 {
+position: absolute;
+font-size: 30px;
+top: 705px;
+left: 150px;
+color: var(--Black);
+}
+
+.outros-perfis-social img {
+width: 100px;
+}
+
+.outras-sugestoes {
+position: absolute;
+right: 100px;
+font-size: 25px;
+top: 250px;
+font-family: "Rubik Mono One";
+}
+
+.outro-perfil-1 {
+position: absolute;
+border-radius: 70px;
+right: 400px;
+top: 300px;
+border: outset 5px var(--DarkMagenta);
+}
+
+.nome-outro-perfil-1 {
+position: absolute;
+font-size: 30px;
+right: 200px;
+top: 340px;
+}
+
+.outro-perfil-2 {
+position: absolute;
+border-radius: 70px;
+border: 5px outset var(--DarkMagenta);
+right: 400px;
+top: 450px;
 }
