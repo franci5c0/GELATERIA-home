@@ -10,8 +10,8 @@ res.status(500).send('Erro ao obter Bolos');
 return;
 }
 res.json(results);
-})
-}
+});
+};
 
 
 //PEDIDOS//
@@ -25,8 +25,8 @@ res.status(500).send('Erro ao obter bolos');
 return;
 }
 res.json(results);
-})
-}
+});
+};
 
 
 //FUNÇÃO PARA ADICIONAR UM BOLO AOS PEDIDOS
@@ -79,10 +79,98 @@ const deletePedidos = (req, res) => {
   }); 
 }; 
 
+
+
+
+//CARRINHO*//
+//*ADICIONAR PEDIDO AO CARRINHO*//
+const addCarrinho_bolos = (req, res) => {
+const {ID, nome_bolo, quantidade, preço} = req.body;
+db.query(
+  'INSERT INTO carrinho_bolos (ID, nome_bolo, quantidade, preço) VALUES(?, ?, ?, ?)',
+  [ID, nome_bolo, quantidade, preço],
+  (err, results) => {
+  if (err) {
+    console.error('Erro ao adicionar o pedido ao carrinho', err);
+    res.status(500).send('Erro ao adicionar o pedido ao carrinho');
+    return;
+  }
+  res.status(201).send('Pedido adicionado com sucesso');
+  }
+);
+};
+
+
+//HISTÓRICO DE PEDIDOS DO CARRINHO//
+const getAllCarrinho_bolos = (req, res) => {
+  db.query('SELECT * FROM carrinho_bolos', (err, results) => {
+  if(err) {
+  console.error('Erro ao obter o pedido:', err);
+  res.status(500).send('Erro ao obter o pedido');
+  return;
+  }
+  res.json(results);
+  });
+  };
+
+
+//FUNÇÃO PARA DELETAR UM PEDIDO DO CARRINHO
+const deleteCarrinho_bolos = (req, res) => { 
+  const { id } = req.params; 
+  db.query('DELETE FROM carrinho_bolos WHERE id = ?', [id], (err, results) => { 
+    if (err) { 
+      console.error('Erro ao deletar o pedido:', err); 
+      res.status(500).send('Erro ao deletar o pedido'); 
+      return; 
+    } 
+    res.send('Pedido deletado com sucesso'); 
+  }); 
+}; 
+
+
+//PAGAMENTO//
+
+//HISTÓRICO DE FORMAS DE PAGAMENTO//
+const getAllPagamento = (req, res) => {
+  db.query('SELECT * FROM pagamento', (err, results) => {
+  if(err) {
+  console.error('Erro ao obter o pedido:', err);
+  res.status(500).send('Erro ao obter o pedido');
+  return;
+  }
+  res.json(results);
+  });
+  };
+
+
+//ADICIONAR UMA FORMA DE PAGAMENTO//
+const addPagamento = (req, res) => {
+  const {ID, PIX, nome, email} = req.body;
+  db.query(
+    'INSERT INTO pagamento (ID, PIX, nome, email) VALUES(?, ?, ?, ?)',
+    [ID, PIX, nome, email],
+    (err, results) => {
+    if (err) {
+      console.error('Erro ao adicionar o pedido ao carrinho', err);
+      res.status(500).send('Erro ao adicionar o pedido ao carrinho');
+      return;
+    }
+    res.status(201).send('Pedido adicionado com sucesso');
+    }
+  );
+  };
+
+
+
 module.exports = {
 getAllBolos,
 getAllPedidos,
+getAllCarrinho_bolos,
+getAllPagamento,
 addPedidos,
+addCarrinho_bolos,
+addPagamento,
 updatePedidosPut,
-deletePedidos
+deletePedidos,
+deleteCarrinho_bolos
 };

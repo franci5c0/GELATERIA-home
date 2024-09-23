@@ -21,6 +21,10 @@ const boloRoutes = require('./routes/bolos');//importa a rota da tabela de bolos
 
 const pedidosRoutes = require('./routes/pedidos')//importa a rota da tabela de pedidos
 
+const carrinhoRoutes = require('./routes/carrinho');//importa a rota do carrinho
+
+const pagamentoRoutes = require('./routes/pagamento')//importa a rota da forma de pagamento
+
 //ANOTAÇÕES//
 
 //o EXPRESS é utilizado para criar e gerenciar servidores web e APIs
@@ -45,6 +49,12 @@ app.use('/api/bolos', boloRoutes);
 
 //usar tas rotas da tabela de pedidos para todas as requisições que começam com /api/pedidos
 app.use('/api/pedidos', pedidosRoutes);
+
+//usar tas rotas da tabela de pedidos para todas as requisições que começam com /api/carrinho
+app.use('/api/carrinho', carrinhoRoutes);
+
+//usar tas rotas da tabela de pedidos para todas as requisições que começam com /api/pagamento
+app.use('/api/pagamento', pagamentoRoutes);
 
 //ROTA INICIAL PARA TESTAR O SERVIDOR
 app.get('/',(req, res) => {
