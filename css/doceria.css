@@ -25,6 +25,7 @@ box-sizing: border-box;
 --SandyBrown: #F4A460;
 --SaddleBrown: #8B4513;
 --Black: #000000;
+--White: #FFFFFF;
 }
 
 /*LINHA DE SEPARAÇÃO*/
@@ -392,4 +393,103 @@ border-radius: 70px;
 border: 5px outset var(--DarkMagenta);
 right: 400px;
 top: 450px;
+}
+
+.nome-outro-perfil-2 {
+position: absolute;
+font-size: 30px;
+right: 250px;
+top: 480px;
+}
+
+.outro-perfil-3 {
+position: absolute;
+border-radius: 70px;
+border: 5px outset var(--DarkMagenta);
+right: 400px;
+top: 600px;
+}
+
+.nome-outro-perfil-3 {
+position: absolute;
+font-size: 30px;
+right: 190px;
+top: 630px;
+}
+
+.perfil-postagem-1 {
+width: 100px;
+position: absolute;
+border-radius: 70px;
+border: outset 4px var(--DarkMagenta);
+left: 600px;
+top: 220px;
+}
+
+.nome-perfil5 {
+position: absolute;
+font-size: 35px;
+left: 720px;
+top: 265px;
+}
+
+.horario-perfil5 {
+position: absolute;
+font-size: 19px;
+left: 830px;
+top: 279px;
+}
+
+.postagem-social-1 {
+width: 700px;
+position: absolute;
+bottom: 200px;
+left: 600px;
+border: outset 5px var(--DarkRed);
+}
+
+.nome-perfil5-comentario {
+position: absolute;
+font-size: 20px;
+left: 610px;
+top: 790px;
+font-size: 25px;
+border: 5px outset var(--DarkMagenta);
+border-radius: 10px;
+background-color: var(--DarkMagenta);
+color: var(--White);
+}
+
+.perfil5-comentario {
+position: absolute;
+font-size: 20px;
+left: 700px;
+top: 798px;
+}
+
+.curtida {
+position: absolute;
+left: 610px;
+top: 740px;
+}
+
+.comentario {
+position: absolute;
+left: 680px;
+top: 740px;
+width: 50px;
+}
+
+.enviar {
+position: absolute;
+left: 750px;
+top: 733px;
+}
+
+.todos-comentarios {
+position: absolute;
+position: absolute;
+left: 610px;
+top: 840px;
+font-size: 27px;
 }
