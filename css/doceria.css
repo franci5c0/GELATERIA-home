@@ -26,6 +26,7 @@ box-sizing: border-box;
 --SaddleBrown: #8B4513;
 --Black: #000000;
 --White: #FFFFFF;
+--Lavender: #E6E6FA;
 }
 
 /*LINHA DE SEPARAÇÃO*/
@@ -188,7 +189,7 @@ bottom: 30px;
 /*REDE SOCIAL*/
 /*GERAL*/
 .corpo-social {
-background-image: url(/css/gradiante-cardapio.png);
+background-color: var(--Lavender);
 }
 
 /*TOPO*/
@@ -223,6 +224,7 @@ font-size: 25px;
 position: absolute;
 left: 412px;
 top: 130px;
+text-shadow: 2px 0px 2px var(--White);
 }
 
 .nome-perfil-2 {
@@ -237,6 +239,7 @@ font-size: 25px;
 position: absolute;
 left: 757px;
 top: 130px;
+text-shadow: 2px 2px 2px var(--White);
 }
 
 .nome-perfil-4 {
@@ -423,21 +426,21 @@ position: absolute;
 border-radius: 70px;
 border: outset 4px var(--DarkMagenta);
 left: 600px;
-top: 220px;
+top: 200px;
 }
 
 .nome-perfil5 {
 position: absolute;
 font-size: 35px;
-left: 720px;
-top: 265px;
+left: 710px;
+top: 260px;
 }
 
 .horario-perfil5 {
 position: absolute;
 font-size: 19px;
-left: 830px;
-top: 279px;
+left: 820px;
+top: 275px;
 }
 
 .postagem-social-1 {
@@ -492,4 +495,10 @@ position: absolute;
 left: 610px;
 top: 840px;
 font-size: 27px;
+}
+
+.button-social {
+position: absolute;
+left: 600px;
+top: 700px;
 }
