@@ -361,6 +361,9 @@ font-size: 30px;
 top: 705px;
 left: 150px;
 color: var(--Black);
+cursor: pointer;
+background-color: var(--Plum);
+border-radius: 10px;
 }
 
 .outros-perfis-social img {
@@ -501,4 +504,35 @@ font-size: 27px;
 position: absolute;
 left: 600px;
 top: 700px;
+}
+
+.nome-perfil-popup {
+margin-left: 13px;
+}
+
+.perfil-popup {
+width: 100px;
+border-radius: 70px;
+margin: 20px;
+}
+
+.dialogo-popup {
+width: 600px;
+height: 800px;
+position: absolute;
+left: 650px;
+top: 60px;
+}
+
+.botao-editar-perfil {
+width: 200px;
+height: 30px;
+position: absolute;
+left: 230px;
+top: 100px;
+}
+
+.publicacoes {
+position: absolute;
+left: 150px;
 }
