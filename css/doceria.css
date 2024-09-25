@@ -90,159 +90,156 @@ main.principal {
       margin: 0px;
     }
 
-div.botoes {
-    button {
-        &.botao-cardapio {
-            position: absolute;
-            top: 450px;
-            left: 200px;
-            width: 300px;
-            height: 80px;
-            border-radius: 10px;
-            background-color: var(--SandyBrown);
-            font-size: 20px;
-            text-transform: uppercase;
-            box-shadow: 5px 5px 5px 5px;
-            cursor: pointer;
+    div.botoes {
+      button {
+        &.botao-bolos {
+          position: absolute;
+          top: 450px;
+          left: 200px;
+          width: 300px;
+          height: 80px;
+          border-radius: 10px;
+          background-color: var(--SandyBrown);
+          font-size: 20px;
+          text-transform: uppercase;
+          box-shadow: 5px 5px 5px 5px;
+          cursor: pointer;
         }
 
-        &.botao-contato {
-            position: absolute;
-            top: 650px;
-            left: 200px;
-            width: 300px;
-            height: 80px;
-            border-radius: 10px;
-            background-color: var(--SandyBrown);
-            font-size: 20px;
-            text-transform: uppercase;
-            box-shadow: 5px 5px 5px 5px;
-            cursor: pointer;
+        &.botao-bolos:hover {
+          transform: scale(1.2);
+        }
+
+        &.botao-sobremesas {
+          position: absolute;
+          top: 650px;
+          left: 200px;
+          width: 300px;
+          height: 80px;
+          border-radius: 10px;
+          background-color: var(--SandyBrown);
+          font-size: 20px;
+          text-transform: uppercase;
+          box-shadow: 5px 5px 5px 5px;
+          cursor: pointer;
+        }
+
+        &.botao-sobremesas:hover {
+          transform: scale(1.2);
         }
 
         &.botao-carrinho {
-            position: absolute;
-            top: 850px;
-            left: 200px;
-            width: 300px;
-            height: 80px;
-            border-radius: 10px;
-            background-color: var(--SandyBrown);
-            font-size: 20px;
-            text-transform: uppercase;
-            box-shadow: 5px 5px 5px 5px;
-            cursor: pointer;
+          position: absolute;
+          top: 850px;
+          left: 200px;
+          width: 300px;
+          height: 80px;
+          border-radius: 10px;
+          background-color: var(--SandyBrown);
+          font-size: 20px;
+          text-transform: uppercase;
+          box-shadow: 5px 5px 5px 5px;
+          cursor: pointer;
+        }
+
+        &.botao-carrinho:hover {
+          transform: scale(1.2);
         }
       }
     }
   }
 }
 
+footer {
+  div.edicao-rodape {
+    background-image: url(/css/confeitaria-topo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -400px;
 
-/*HOVER - TRANSIÇÕES*/
-.botao-cardapio:hover {
-  transform: scale(1.2);
+    div.icone-rodape {
+      position: relative;
+
+      img.instagram {
+        width: 200px;
+      }
+
+      div.pagamento {
+        strong.forma-pagamento {
+          font-size: 60px;
+          font-family: "Dancing Script";
+          color: var(--gold);
+          position: absolute;
+          left: 400px;
+          bottom: 120px;
+        }
+
+        img.pix {
+          position: absolute;
+          left: 580px;
+          width: 70px;
+          bottom: 30px;
+        }
+      }
+    }
+  }
 }
 
-.botao-contato:hover {
-  transform: scale(1.2);
-}
-
-.botao-carrinho:hover {
-  transform: scale(1.2);
-}
-
-.botao-editar-perfil:hover {
-  transform: scale(0.9);
-}
-
-/*FOOTER*/
-.icone-rodape {
-  /*DIV DO ICONE DO INSTAGRAM*/
-  position: relative;
-}
-
-.instagram {
-  /*IMAGEM DO ICONE DO INSTAGRAM*/
-  width: 200px;
-}
-
-.edicao-rodape {
-  /*DIV PRINCIPAL DO RODAPÉ*/
-  background-image: url(/css/confeitaria-topo.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 0px -400px;
-}
-
-.forma-pagamento {
-  /*DIV DA FORMA DE PAGAMENTO NO RODAPÉ*/
-  font-size: 60px;
-  font-family: "Dancing Script";
-  color: var(--gold);
-  position: absolute;
-  left: 400px;
-  bottom: 120px;
-}
-
-.pix {
-  /*CLASSE DA FORMA DE PAGAMENTO*/
-  position: absolute;
-  left: 580px;
-  width: 70px;
-  bottom: 30px;
-}
-
-/*REDE SOCIAL*/
-/*GERAL*/
-.corpo-social {
+body.corpo-social {
   background-color: var(--Lavender);
-}
 
-/*TOPO*/
-.topo-social {
-  width: 100%;
-  position: absolute;
-  border-right: 2px outset var(--Brown);
-  background-image: url(/css/gradiante-social.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-bottom: outset 5px var(--Crimson);
-  box-shadow: 0px 2px 7px 2px;
-}
+  header.topo-social {
+    width: 100%;
+    position: absolute;
+    border-right: 2px outset var(--Brown);
+    background-image: url(/css/gradiante-social.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: outset 5px var(--Crimson);
+    box-shadow: 0px 2px 7px 2px;
 
-.topo-perfis {
-  /*PERFIS DO CABEÇALHO*/
-  display: flex;
-  gap: 20px;
-  margin-left: 380px;
-}
+    div.topo-div-social {
+      img {
+        width: 100px;
+        border-radius: 70px;
+        border: outset 4px var(--DarkMagenta);
+        margin: 30px;
+        left: 380px;
+        margin-bottom: 50px;
+      }
 
-.topo-div-social img {
-  /*IMAGENS DA DIV PRINCIPAL DOS PERFIS NO CABEÇALHO*/
-  width: 100px;
-  border-radius: 70px;
-  border: outset 4px var(--DarkMagenta);
-  margin: 30px;
-  left: 380px;
-  margin-bottom: 50px;
-}
+      div.topo-perfis {
+        /*div principal das imagens de perfil*/
+        display: flex;
+        gap: 20px;
+        margin-left: 380px;
 
-.nome-perfil-1 {
-  font-size: 25px;
-  position: absolute;
-  left: 414px;
-  top: 145px;
-  text-shadow: 2px 0px 2px var(--White);
-  font-family: "Kalam";
-}
+        div.imagem-perfil-1 {
+          /*primeira div das imagens de perfil*/
+          strong.nome-perfil-1 {
+            font-size: 25px;
+            position: absolute;
+            left: 414px;
+            top: 145px;
+            text-shadow: 2px 0px 2px var(--White);
+            font-family: "Kalam";
+          }
+        }
+        div.imagem-perfil-2 {
+          /*segunda div das imagens de perfil*/
+          strong.nome-perfil-2 {
+            font-size: 25px;
+            position: absolute;
+            left: 600px;
+            top: 145px;
+            font-family: "Kalam";
+          }
+        }
 
-.nome-perfil-2 {
-  font-size: 25px;
-  position: absolute;
-  left: 600px;
-  top: 145px;
-  font-family: "Kalam";
+        
+      }
+    }
+  }
 }
 
 .nome-perfil-3 {
