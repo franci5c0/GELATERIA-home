@@ -184,3 +184,15 @@ footer {
     }
   }
 }
+
+
+header.cabeçalho {
+  display: flex;
+  justify-content: center;
+
+  div.topo-perfis {
+    img {
+      width: 100px;
+    }
+  }
+}
