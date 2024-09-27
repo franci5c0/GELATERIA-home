@@ -5,7 +5,7 @@
 
 :root {
   --Crimson: #dc143c;
-  --DarkMagenta: #8b008b;
+  --bordasocial: #8b008b;
   --Chocolate: #d2691e;
   --DarkRed: #8b0000;
   --Plum: #dda0dd;
@@ -187,17 +187,20 @@ footer {
 
 
 header.topo {
-  display: flex;
-  justify-content: center;
   background-image: url(/css/gradiante-social.png);
   background-repeat: no-repeat;
   background-size: cover;
-
   
 row-gap: 20px;
   div.topo-perfis {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
     img {
       width: 100px;
+      margin: 20px;
+      border-radius: 70px;
+      border: outset 5px var(--bordasocial);
     }
   }
 }
