@@ -186,10 +186,15 @@ footer {
 }
 
 
-header.cabeçalho {
+header.topo {
   display: flex;
   justify-content: center;
+  background-image: url(/css/gradiante-social.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 
+  
+row-gap: 20px;
   div.topo-perfis {
     img {
       width: 100px;
