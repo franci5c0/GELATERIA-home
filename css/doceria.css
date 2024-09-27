@@ -17,7 +17,7 @@
   --SandyBrown: #f4a460;
   --SaddleBrown: #8b4513;
   --Black: #000000;
-  --White: #ffffff;
+  --fundomainsocial: #ffffff;
   --Lavender: #e6e6fa;
 }
 
@@ -185,13 +185,12 @@ footer {
   }
 }
 
-
 header.topo {
   background-image: url(/css/gradiante-social.png);
   background-repeat: no-repeat;
   background-size: cover;
-  
-row-gap: 20px;
+
+  row-gap: 20px;
   div.topo-perfis {
     display: flex;
     justify-content: center;
@@ -201,6 +200,16 @@ row-gap: 20px;
       margin: 20px;
       border-radius: 70px;
       border: outset 5px var(--bordasocial);
+    }
+  }
+}
+
+main.principal-social {
+  background-color: var(--fundomainsocial);
+  div.aba-meuperfil {
+    img {
+      width: 400px;
+      height: 768.50px;
     }
   }
 }
