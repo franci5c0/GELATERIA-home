@@ -5,7 +5,7 @@
 
 :root {
   --Crimson: #dc143c;
-  --bordasocial: #8b008b;
+  --bordaperfilsocial: #8b008b;
   --Chocolate: #d2691e;
   --DarkRed: #8b0000;
   --Plum: #dda0dd;
@@ -14,9 +14,9 @@
   --Brown: #a52a2a;
   --Sienna: #a0522d;
   --RosyBrown: #bc8f8f;
-  --SandyBrown: #f4a460;
-  --SaddleBrown: #8b4513;
-  --Black: #000000;
+  --botaoindex: #f4a460;
+  --boxshadow: #8b4513;
+  --cortexto-boxshadow: #000000;
   --fundomainsocial: #ffffff;
   --Lavender: #e6e6fa;
 }
@@ -91,60 +91,27 @@ main.principal {
     }
 
     div.botoes {
-      button {
-        &.botao-bolos {
-          position: absolute;
-          top: 450px;
-          left: 200px;
-          width: 300px;
-          height: 80px;
-          border-radius: 10px;
-          background-color: var(--SandyBrown);
-          font-size: 20px;
-          text-transform: uppercase;
-          box-shadow: 5px 5px 5px 5px;
-          cursor: pointer;
-        }
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      font-size: 60px;
+      top: 350px;
+      left: 240px;
+      gap: 150px;
+      text-transform: uppercase;
 
-        &.botao-bolos:hover {
-          transform: scale(1.2);
-        }
-
-        &.botao-sobremesas {
-          position: absolute;
-          top: 650px;
-          left: 200px;
-          width: 300px;
-          height: 80px;
-          border-radius: 10px;
-          background-color: var(--SandyBrown);
-          font-size: 20px;
-          text-transform: uppercase;
-          box-shadow: 5px 5px 5px 5px;
-          cursor: pointer;
-        }
-
-        &.botao-sobremesas:hover {
-          transform: scale(1.2);
-        }
-
-        &.botao-carrinho {
-          position: absolute;
-          top: 850px;
-          left: 200px;
-          width: 300px;
-          height: 80px;
-          border-radius: 10px;
-          background-color: var(--SandyBrown);
-          font-size: 20px;
-          text-transform: uppercase;
-          box-shadow: 5px 5px 5px 5px;
-          cursor: pointer;
-        }
-
-        &.botao-carrinho:hover {
-          transform: scale(1.2);
-        }
+      a.botao-doces {
+        text-decoration: none;
+        color: var(--cortexto-boxshadow);
+        background-color: var(--botaoindex);
+        border-radius: 10px;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 5px 5px 4px 5px var(--cortexto-boxshadow);
+        cursor: pointer;
+      }
+      a.botao-doces:hover {
+        transform: scale(1.1);
       }
     }
   }
@@ -199,7 +166,11 @@ header.topo {
       width: 100px;
       margin: 20px;
       border-radius: 70px;
-      border: outset 5px var(--bordasocial);
+      border: outset 5px var(--bordaperfilsocial);
+      cursor: pointer;
+    }
+    img:hover {
+      transform: scale(1.2);
     }
   }
 }
@@ -208,8 +179,6 @@ main.principal-social {
   background-color: var(--fundomainsocial);
   div.aba-meuperfil {
     img {
-      width: 400px;
-      height: 768.50px;
     }
   }
 }
