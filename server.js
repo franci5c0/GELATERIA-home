@@ -25,6 +25,8 @@ const carrinhoRoutes = require('./routes/carrinho');//importa a rota do carrinho
 
 const pagamentoRoutes = require('./routes/pagamento')//importa a rota da forma de pagamento
 
+const cadastroRoutes = require('./routes/cadastro');
+
 //ANOTAÇÕES//
 
 //o EXPRESS é utilizado para criar e gerenciar servidores web e APIs
@@ -55,6 +57,9 @@ app.use('/api/carrinho', carrinhoRoutes);
 
 //usar tas rotas da tabela de pedidos para todas as requisições que começam com /api/pagamento
 app.use('/api/pagamento', pagamentoRoutes);
+
+//usar tas rotas da tabela de pedidos para todas as requisições que começam com /api/cadastro
+app.use('/api/cadastro', cadastroRoutes);
 
 //ROTA INICIAL PARA TESTAR O SERVIDOR
 app.get('/',(req, res) => {

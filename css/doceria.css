@@ -4,11 +4,11 @@
 }
 
 :root {
-  --Crimson: #dc143c;
-  --bordaperfilsocial: #8b008b;
+  --bordadonuts: #dc143c;
+  --bordaperfilsocial-divisoesdonuts: #8b008b;
   --Chocolate: #d2691e;
   --DarkRed: #8b0000;
-  --Plum: #dda0dd;
+  --divisaodonuts: #dda0dd;
   --gold: #ffd700;
   --DarkOrange: #ff8c00;
   --Brown: #a52a2a;
@@ -17,8 +17,10 @@
   --botaoindex: #f4a460;
   --boxshadow: #8b4513;
   --cortexto-boxshadow: #000000;
-  --fundomainsocial: #ffffff;
+  --fundomainsocial-botaodonuts: #ffffff;
   --Lavender: #e6e6fa;
+  --main-donuts: #fd94fd;
+  --backgrounddonuts: #fc55ae;
 }
 
 header.cabeçalho {
@@ -94,10 +96,10 @@ main.principal {
       display: flex;
       flex-direction: column;
       position: absolute;
-      font-size: 60px;
+      font-size: 35px;
       top: 350px;
       left: 240px;
-      gap: 150px;
+      gap: 140px;
       text-transform: uppercase;
 
       a.botao-doces {
@@ -115,6 +117,11 @@ main.principal {
       }
     }
   }
+}
+
+.hr-donuts {
+  margin-bottom: 70px ;
+  border: 3px outset var(--divisaodonuts);
 }
 
 footer {
@@ -152,7 +159,7 @@ footer {
   }
 }
 
-header.topo {
+header.topo-social {
   background-image: url(/css/gradiante-social.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -182,3 +189,84 @@ main.principal-social {
     }
   }
 }
+
+
+header.topo-donuts {
+  text-align: center;
+
+  div.cardapio-header {
+    margin: 50px;
+
+   strong.cardapio-header {
+    text-transform: uppercase;
+    font-family: "Lobster";
+    font-size: 40px;
+    } 
+  }
+}
+
+body.corpo-donuts {
+  /*background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(221,160,221,1) 0%, rgba(255,105,180,1) 15%, rgba(244,64,154,1) 51%, rgba(255,105,180,1) 82%, rgba(221,160,221,1) 100%, rgba(139,0,139,1) 100%);
+  */
+background-color: var(--backgrounddonuts);
+}
+
+main.principal-donuts {
+
+  div.cardapio-donuts {
+
+    div.imagem-donuts {
+      font-size: 40px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      background: rgb(2,0,36);
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(221,160,221,1) 0%, rgba(255,105,180,1) 14%, rgba(255,117,186,1) 47%, rgba(255,118,187,1) 82%, rgba(221,160,221,1) 100%, rgba(139,0,139,1) 100%);
+      padding: 30px;
+      box-shadow: 3px 1px 1px 5px var(--cortexto-boxshadow);
+      margin: 50px;
+      border-radius: 30px;
+    }
+    
+      img.D-imagem {
+        border-radius: 40px;
+        border: outset 4px var(--bordadonuts);
+        margin-left: 450px;
+        box-shadow: 2px 2px 2px 2px var(--cortexto-boxshadow);
+        margin-bottom: 70px;
+        margin: auto 300px;
+      }
+
+      strong.desc-imagem-donuts {
+        margin: auto 0;
+      }
+
+      button.botao-imagem-donuts {
+        width: 130px;
+        height: 50px;
+        margin: auto 0;
+        cursor: pointer;
+        border-radius: 20px;
+        box-shadow: 1px 2px 1px 1px var(--cortexto-boxshadow);
+        font-size: 20px;
+        background-color: var(--fundomainsocial-botaodonuts);
+      }
+
+      span.preco-cardapio-donuts {
+        margin: auto 100px;
+        margin-left: -500px;
+        margin-bottom: 150px;
+        
+      }
+    }
+  }
+
+  hr.hr-cardapio {
+    margin-bottom: 70px ;
+    border: 3px outset var(--bordaperfilsocial-divisoesdonuts);
+  }
+
+
+}
+

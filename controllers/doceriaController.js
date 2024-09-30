@@ -162,15 +162,84 @@ const addPagamento = (req, res) => {
 
 
 
+//CADASTRO//
+const addCadastro = (req,res) => {
+  const {nome, email, CPF, senha} = req.body;
+
+db.query (
+  'SELECT * FROM cadastro WHERE email = ? AND CPF = ?',
+
+  [nome, email, CPF, senha], 
+  (err,result) => {
+    if(err) {
+        console.error('Erro ao verificar o cliente', err);
+        res.status(500).send('Erro ao verificar o cliente');
+        return;
+      }
+      if(result.length > 0) {
+        res.status(400).send('Cliente já cadastrado');
+        return;
+      }
+      db.query (
+        'INSERT INTO cadastro (nome, email, CPF, senha) VALUES(?, ?, ?, ?)',
+        [nome, email, CPF, senha],
+        (err,result) => {
+
+          if (err) {
+            console.error('Cliente já cadastrado', err);
+            res.status(500).send('Cliente já cadastrado');
+            return;
+          }
+          res.status(201).send('Cliente cadastrado com sucesso');
+        }
+      );
+    }
+  );
+};
+
+const getAllCadastro = (req, res) => {
+  db.query('SELECT * FROM cadastro', (err, results) => {
+  if(err) {
+  console.error('Erro ao obter os cadastros:', err);
+  res.status(500).send('Erro ao obter os cadastros');
+  return;
+  }
+  res.json(results);
+  });
+  };
+
+
+
+const deleteCadastro = (req, res) => { 
+  const { id } = req.params; 
+  db.query('DELETE FROM cadastro WHERE id = ?', [id], (err, results) => { 
+    if (err) { 
+      console.error('Erro ao deletar o cadastro:', err); 
+      res.status(500).send('Erro ao deletar o cadastro'); 
+      return; 
+    } 
+    res.send('Cadastro deletado com sucesso'); 
+  }); 
+}; 
+
+
+
+
+
+
+
 module.exports = {
 getAllBolos,
 getAllPedidos,
 getAllCarrinho_bolos,
 getAllPagamento,
+getAllCadastro,
 addPedidos,
 addCarrinho_bolos,
+addCadastro,
 addPagamento,
 updatePedidosPut,
 deletePedidos,
-deleteCarrinho_bolos
+deleteCarrinho_bolos,
+deleteCadastro
 };
