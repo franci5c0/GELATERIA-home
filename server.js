@@ -67,7 +67,7 @@ res.send('o servidor está rodando');//define uma rota inicial para testar o ser
 });
 
 // Configura o servidor para escutar em uma porta específica 
-const PORT = process.env.PORT || 3000; // Define a porta a par r da variável de ambiente ou usa a porta 3000 como padrão 
+const PORT = process.env.PORT || 3500; // Define a porta a par r da variável de ambiente ou usa a porta 3000 como padrão 
 app.listen(PORT,() => {
 console.log(`servidor rodando na porta ${PORT}`);
 }); //escreve uma mensagem informando que o servidor está rodando

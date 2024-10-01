@@ -4,12 +4,12 @@
 }
 
 :root {
-  --bordadonuts: #dc143c;
+  --textodonutsnatal: #dc143c;
   --bordaperfilsocial-divisoesdonuts: #8b008b;
   --Chocolate: #d2691e;
   --DarkRed: #8b0000;
   --divisaodonuts: #dda0dd;
-  --gold: #ffd700;
+  --bodydonut: #FFE4B5;
   --DarkOrange: #ff8c00;
   --Brown: #a52a2a;
   --Sienna: #a0522d;
@@ -21,7 +21,7 @@
   --cardapiodonuts: #e6e6fa;
   --main-donuts: #fd94fd;
   --divsdonuts: #D8BFD8;
-  --donutsnatal: #32CD32;
+  --donutsnatal-shadowspan: #00FF7F;
 }
 
 header.cabeçalho {
@@ -210,71 +210,23 @@ body.corpo-donuts {
   /*background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(221,160,221,1) 0%, rgba(255,105,180,1) 15%, rgba(244,64,154,1) 51%, rgba(255,105,180,1) 82%, rgba(221,160,221,1) 100%, rgba(139,0,139,1) 100%);
   */
-background-color: var(--cardapiodonuts);
+background-color: var(--bodydonut);
 }
 
 main.principal-donuts {
 
 section.sessao-menu {
+
   div.cardapio-donuts {
 
-    div.imagem-donuts-natal {
-      background-image: url(/imagens-donuts/donuts-natalinos.jpeg);
-      font-size: 40px;
-      display: flex;
-      gap: 20px;
-      /* background: rgb(2,0,36); */
-      /*background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(221,160,221,1) 0%, rgba(255,105,180,1) 14%, rgba(255,117,186,1) 47%, rgba(255,118,187,1) 82%, rgba(221,160,221,1) 100%, rgba(139,0,139,1) 100%);*/
-      margin: 50px;
-      border-radius: 30px;
-      background-color: var(--divsdonuts);
-      height: 500px;
-      background-position: 0 -70px;
-      background-repeat: no-repeat;
-    }
+    
 
-      /* img.D-imagem { 
-        border-radius: 40px;
-        border: outset 4px var(--bordadonuts);
-        margin-left: 450px;
-        box-shadow: 2px 2px 2px 2px var(--cortexto-boxshadow);
-        margin-bottom: 70px;
-        margin: auto 300px;
-      } */
 
-      strong.desc-imagem-donuts-natal {
-        margin: auto 0;
-        color: var(--donutsnatal);
 
-      }
 
-      button.botao-imagem-donuts-natal {
-        width: 130px;
-        height: 50px;
-        margin: auto 0;
-        cursor: pointer;
-        border-radius: 20px;
-        box-shadow: 1px 2px 1px 1px var(--cortexto-boxshadow);
-        font-size: 20px;
-        background-color: var(--fundomainsocial-botaodonuts);
-      }
-
-      span.preco-cardapio-donuts-natal {
-        margin: auto 100px;
-        margin-left: 500px;
-        margin-bottom: 150px;
-        
-        }
-      }
-
-      h3.donuts-comemorativos {
-        text-transform: uppercase;
-        font-family: "Oleo Script";
-        font-size: 40px;
-        text-align: center;
-      }
     }
   }
+}
 
   hr.hr-cardapio {
     margin-bottom: 70px ;
