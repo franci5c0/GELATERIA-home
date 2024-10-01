@@ -18,9 +18,10 @@
   --boxshadow: #8b4513;
   --cortexto-boxshadow: #000000;
   --fundomainsocial-botaodonuts: #ffffff;
-  --Lavender: #e6e6fa;
+  --cardapiodonuts: #e6e6fa;
   --main-donuts: #fd94fd;
-  --backgrounddonuts: #fc55ae;
+  --divsdonuts: #D8BFD8;
+  --donutsnatal: #32CD32;
 }
 
 header.cabeçalho {
@@ -197,9 +198,9 @@ header.topo-donuts {
   div.cardapio-header {
     margin: 50px;
 
-   strong.cardapio-header {
+   h2.cardapio-header {
     text-transform: uppercase;
-    font-family: "Lobster";
+    font-family: "Oleo Script";
     font-size: 40px;
     } 
   }
@@ -209,40 +210,45 @@ body.corpo-donuts {
   /*background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(221,160,221,1) 0%, rgba(255,105,180,1) 15%, rgba(244,64,154,1) 51%, rgba(255,105,180,1) 82%, rgba(221,160,221,1) 100%, rgba(139,0,139,1) 100%);
   */
-background-color: var(--backgrounddonuts);
+background-color: var(--cardapiodonuts);
 }
 
 main.principal-donuts {
 
+section.sessao-menu {
   div.cardapio-donuts {
 
-    div.imagem-donuts {
+    div.imagem-donuts-natal {
+      background-image: url(/imagens-donuts/donuts-natalinos.jpeg);
       font-size: 40px;
       display: flex;
       gap: 20px;
-      align-items: center;
-      background: rgb(2,0,36);
-      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(221,160,221,1) 0%, rgba(255,105,180,1) 14%, rgba(255,117,186,1) 47%, rgba(255,118,187,1) 82%, rgba(221,160,221,1) 100%, rgba(139,0,139,1) 100%);
-      padding: 30px;
-      box-shadow: 3px 1px 1px 5px var(--cortexto-boxshadow);
+      /* background: rgb(2,0,36); */
+      /*background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(221,160,221,1) 0%, rgba(255,105,180,1) 14%, rgba(255,117,186,1) 47%, rgba(255,118,187,1) 82%, rgba(221,160,221,1) 100%, rgba(139,0,139,1) 100%);*/
       margin: 50px;
       border-radius: 30px;
+      background-color: var(--divsdonuts);
+      height: 500px;
+      background-position: 0 -70px;
+      background-repeat: no-repeat;
     }
-    
-      img.D-imagem {
+
+      /* img.D-imagem { 
         border-radius: 40px;
         border: outset 4px var(--bordadonuts);
         margin-left: 450px;
         box-shadow: 2px 2px 2px 2px var(--cortexto-boxshadow);
         margin-bottom: 70px;
         margin: auto 300px;
-      }
+      } */
 
-      strong.desc-imagem-donuts {
+      strong.desc-imagem-donuts-natal {
         margin: auto 0;
+        color: var(--donutsnatal);
+
       }
 
-      button.botao-imagem-donuts {
+      button.botao-imagem-donuts-natal {
         width: 130px;
         height: 50px;
         margin: auto 0;
@@ -253,11 +259,19 @@ main.principal-donuts {
         background-color: var(--fundomainsocial-botaodonuts);
       }
 
-      span.preco-cardapio-donuts {
+      span.preco-cardapio-donuts-natal {
         margin: auto 100px;
-        margin-left: -500px;
+        margin-left: 500px;
         margin-bottom: 150px;
         
+        }
+      }
+
+      h3.donuts-comemorativos {
+        text-transform: uppercase;
+        font-family: "Oleo Script";
+        font-size: 40px;
+        text-align: center;
       }
     }
   }
@@ -267,6 +281,4 @@ main.principal-donuts {
     border: 3px outset var(--bordaperfilsocial-divisoesdonuts);
   }
 
-
-}
 
