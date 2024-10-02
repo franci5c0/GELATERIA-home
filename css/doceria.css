@@ -9,7 +9,6 @@
   --Chocolate: #d2691e;
   --DarkRed: #8b0000;
   --divisaodonuts: #dda0dd;
-  --bodydonut: #FFE4B5;
   --DarkOrange: #ff8c00;
   --Brown: #a52a2a;
   --Sienna: #a0522d;
@@ -17,7 +16,7 @@
   --botaoindex: #f4a460;
   --boxshadow: #8b4513;
   --cortexto-boxshadow: #000000;
-  --fundomainsocial-botaodonuts: #ffffff;
+  --fundodonuts: #ffffff;
   --cardapiodonuts: #e6e6fa;
   --main-donuts: #fd94fd;
   --divsdonuts: #D8BFD8;
@@ -200,8 +199,8 @@ header.topo-donuts {
 
    h2.cardapio-header {
     text-transform: uppercase;
-    font-family: "Oleo Script";
-    font-size: 40px;
+    font-family: "Bebas Neue";
+    font-size: 50px;
     } 
   }
 }
@@ -210,23 +209,62 @@ body.corpo-donuts {
   /*background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(221,160,221,1) 0%, rgba(255,105,180,1) 15%, rgba(244,64,154,1) 51%, rgba(255,105,180,1) 82%, rgba(221,160,221,1) 100%, rgba(139,0,139,1) 100%);
   */
-background-color: var(--bodydonut);
+background-color: var(--fundodonuts);
 }
 
 main.principal-donuts {
-
 section.sessao-menu {
-
   div.cardapio-donuts {
+    margin-left: 150px;  
+    display: grid;
+    grid-template-columns: repeat(4, 400px);
 
-    
+    div.caixas-donuts {
+    box-shadow: 2px 0px 5px 3px var(--cortexto-boxshadow);
+    margin: 20px;
+    border-radius: 20px;
+    background-color: #FFFFF0;
 
+      div.donut-block {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
 
+      img {
+        width: 300px;
+        margin: auto;
+        cursor: pointer;
+        }
 
+        img:hover {
+          transform: scale(1.2);
+        
+        }
 
+        strong.donut-coment {
+          margin: auto;
+          font-size: 25px;
+          font-family: "Concert One";
+          margin-bottom: 20px;
+          }
+        }
+      }
     }
   }
 }
+
+
+rodape.rodape-donuts {
+  background-color:  #00FF7F;
+
+    div.objetos-rodape-donuts {
+      img {
+        
+    }
+  }
+}
+
+
 
   hr.hr-cardapio {
     margin-bottom: 70px ;

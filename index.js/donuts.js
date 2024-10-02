@@ -1,8 +1,7 @@
-
 /*POP-UP*/
 const button = document.querySelector("button");
 const modal = document.querySelector("dialog");
-const buttonClose = document.getElementById("botao");
+const buttonClose = document.querySelector("dialog button");
 
 button.onclick = function () {
     modal.showModal()

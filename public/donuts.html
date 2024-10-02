@@ -14,11 +14,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&family=Playwrite+CU:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Playwrite+NL:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oleo+Script:wght@400;700&family=Playwrite+NL:wght@100..400&display=swap');
 </style>
 
     <header class="topo-donuts">
         <div class="cardapio-header">
-            <h2 class="cardapio-header">Donuts Sweet Magic</strong>
+            <h2 class="cardapio-header">Cardápio de donuts</strong>
         </div> 
     </header>
 
@@ -27,93 +28,113 @@
 <section class="sessao-menu">
 
     <div class="cardapio-donuts">
-           
-        <img src="/imagens-donuts/donut-chocolate.png">
-        <img src="/imagens-donuts/donut-banana-caramelo.png">
-        <img src="/imagens-donuts/donut-doce-leite.png">
-        <img src="/imagens-donuts/donut-morango.png">
-        <img src="/imagens-donuts/donut-caramelo.png">
+        <div class="caixas-donuts"><!--PRIMEIRA DIV DAS CAIXAS-->
+            <div class="donut-block">
+                <img src="/imagens-donuts/donut-chocolate.png">
+                <strong class="donut-coment">Chocolate</strong>
+            </div>
+        
+            <div class="donut-block">
+                <img src="/imagens-donuts/donut-morango.png">
+                <strong class="donut-coment">Morango</strong>
+            </div>
 
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-
-</section>
-
-<!-- <section class="sessao-menu"> 
-
-            <h3 class="donuts-comemorativos">Donuts comemorativos</h2>
-
-    <div class="cardapio-donuts">
-        <div class="imagem-donuts">
-            <img class="D-imagem" src="/imagens-donuts/donuts-natalinos.jpeg" width="400px" height="500px">
-            <strong class="desc-imagem-donuts">Donuts natalinos</strong>
-            <button class="botao-imagem-donuts" type="button">Comprar</button>
-            <span class="preco-cardapio-donuts">R$15.00</span>
-        </div>
-
-    <!-- <hr class="hr-cardapio"> -
-
-        <div class="cardapio-donuts">
-            <div class="imagem-donuts">
-            <img class="D-imagem" src="/imagens-donuts/donuts-casamenteiros.jpeg" width="400px" height="500px">
-            <strong class="desc-imagem-donuts">Donuts casamenteiros</strong>
-            <button class="botao-imagem-donuts" type="button">Comprar</button>
-            <span class="preco-cardapio-donuts">R$12.00</span>
+            <div class="donut-block">
+                <img src="/imagens-donuts/donut-brownie.png">
+                <strong class="donut-coment">Brownie</strong>
             </div>
         </div>
 
-    <!-- <hr class="hr-cardapio"> -
+        <div class="caixas-donuts"><!--SEGUNDA DIV DAS CAIXAS-->
+            <div class="donut-block">
+                <img src="/imagens-donuts/donut-banana-caramelo.png">
+                <strong class="donut-coment">Caramelo com banana</strong>
+            </div>
 
-    <div class="cardapio-donuts">
-        <div class="imagem-donuts">
-        <img class="D-imagem" src="/imagens-donuts/donuts-de-halloween.jpeg" width="400px" height="500px">
-        <strong class="desc-imagem-donuts">Donuts de halloween</strong>
-        <button class="botao-imagem-donuts" type="button">Comprar</button>
-        <span class="preco-cardapio-donuts">R$17.00</span>
+            <div class="donut-block">
+                <img src="/imagens-donuts/donut-caramelo.png">
+                <strong class="donut-coment">Caramelo</strong>
+            </div>
+
+            <div class="donut-block">
+                <img src="/imagens-donuts/donut-castanha.png">
+                <strong class="donut-coment">M&M'S</strong>
+            </div>
+        </div>
+
+        <div class="caixas-donuts"><!--TERCEIRA DIV DAS CAIXAS-->
+            <div class="donut-block">
+                <img src="/imagens-donuts/donut-chantily.png">
+                <strong class="donut-coment">Chantily</strong>
+            </div>
+
+            <div class="donut-block">
+                <img src="/imagens-donuts/donut-doce-leite.png">
+                <strong class="donut-coment">Doce de leite</strong>
+            </div>
+
+            <div class="donut-block">
+                <img src="/imagens-donuts/donut-maracuja.png">
+                <strong class="donut-coment">Maracujá</strong>
+            </div>
+        </div>
+
+        <div class="caixas-donuts"><!--QUARTA DIV DAS CAIXAS-->
+            <div class="donut-block">
+                <img src="/imagens-donuts/donut-choco-branco.png">
+                <strong class="donut-coment">Chocolate branco</strong>
+            </div>
+
+            <div class="donut-block">
+                <img src="/imagens-donuts/donut-pacoca.png">
+                <strong class="donut-coment">Amendoim</strong>
+            </div>
+
+            <div id="frutas" class="donut-block">
+                <img src="/imagens-donuts/donut-frutas.png">
+                <strong class="donut-coment">Frutas exóticas</strong>
+            </div>
         </div>
     </div>
 
-    <!-- <hr class="hr-cardapio"> -
-
-    <div class="cardapio-donuts">
-        <div class="imagem-donuts">
-        <img class="D-imagem" src="/imagens-donuts/donuts-dos-namorados.jpeg" width="400px" height="500px">
-        <strong class="desc-imagem-donuts">Donuts dos namorados</strong>
-        <button class="botao-imagem-donuts" type="button">Comprar</button>
-        <span class="preco-cardapio-donuts">R$20.00</span>
-        </div>
-    </div>
-
-</div>
-
-</section> -->
 
 
 
 
 
 
-
-
-
-
-
-
+    
+</section>
 </main>
 
+<footer class="rodape-donuts">
+
+    <div class="objetos-rodape-donuts">
+        <img src="/icones/home-donuts.png">
+         <button class="botao-saiba-rodape" type="button">Saiba mais</button>
+    </div>
+
+   
+
+</footer>
 
 
 
+
+
+
+
+<dialog> 
+    <h2 class="sobre-donuts">Saiba mais</h2>
+
+    <img src="/imagens-donuts/donut-chocolate.png">
+
+    <button class="fechar" type="button">Fechar</button>
+</dialog>
+
+
+<script src="/index.js/donuts.js"></script>
+    
 
 </body>
 </html>
