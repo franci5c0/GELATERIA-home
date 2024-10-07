@@ -19,9 +19,8 @@
   --fundodonuts: #ffffff;
   --cardapiodonuts: #e6e6fa;
   --main-donuts: #fd94fd;
-  --divsdonuts: #D8BFD8;
-  --donutsnatal-shadowspan: #00FF7F;
-  --dint: #00FF7F;
+  --divsdonuts: #d8bfd8;
+  --donutsnatal-shadowspan: #00ff7f;
 }
 
 header.cabeçalho {
@@ -121,11 +120,11 @@ main.principal {
 }
 
 .hr-donuts {
-  margin-bottom: 70px ;
+  margin-bottom: 70px;
   border: 3px outset var(--divisaodonuts);
 }
 
-footer {
+footer.rodape-index {
   div.edicao-rodape {
     background-image: url(/css/confeitaria-topo.png);
     background-repeat: no-repeat;
@@ -133,10 +132,16 @@ footer {
     background-position: 0px -400px;
 
     div.icone-rodape {
-      position: relative;
+      display: flex;
+      justify-content: center;
 
       img.instagram {
         width: 200px;
+      }
+
+      strong.comentario-rodape-index {
+        font-size: 30px;
+        margin: auto 0;
       }
 
       div.pagamento {
@@ -185,24 +190,19 @@ header.topo-social {
 
 main.principal-social {
   background-color: var(--fundomainsocial);
-  div.aba-meuperfil {
-    img {
-    }
-  }
 }
 
-
-header.topo-donuts {
+header.topo-menu {
   text-align: center;
 
-  div.cardapio-header {
+  div.menu-header {
     margin: 50px;
 
-   h2.cardapio-header {
-    text-transform: uppercase;
-    font-family: "Bebas Neue";
-    font-size: 50px;
-    } 
+    h2.menu-header {
+      text-transform: uppercase;
+      font-family: "Bebas Neue";
+      font-size: 50px;
+    }
   }
 }
 
@@ -210,43 +210,42 @@ body.corpo-donuts {
   /*background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(221,160,221,1) 0%, rgba(255,105,180,1) 15%, rgba(244,64,154,1) 51%, rgba(255,105,180,1) 82%, rgba(221,160,221,1) 100%, rgba(139,0,139,1) 100%);
   */
-background-color: var(--fundodonuts);
+  background-color: var(--fundodonuts);
 }
 
-main.principal-donuts {
-section.sessao-menu {
-  div.cardapio-donuts {
-    margin-left: 150px;  
-    display: grid;
-    grid-template-columns: repeat(4, 400px);
+main.principal-menu {
+  section.sessao-menu {
+    div.menu {
+      margin-left: 150px;
+      display: grid;
+      grid-template-columns: repeat(4, 400px);
 
-    div.caixas-donuts {
-    box-shadow: 2px 0px 5px 3px var(--cortexto-boxshadow);
-    margin: 20px;
-    border-radius: 20px;
-    background-color: #FFFFF0;
+      div.caixas-menu {
+        box-shadow: 2px 0px 5px 3px var(--cortexto-boxshadow);
+        margin: 20px;
+        border-radius: 20px;
+        background-color: #fffff0;
 
-      div.donut-block {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-
-      img {
-        width: 300px;
-        margin: auto;
-        cursor: pointer;
-        }
-
-        img:hover {
-          transform: scale(1.2);
-        
-        }
-
-        strong.donut-coment {
+        div.menu-block {
+          display: flex;
+          flex-direction: column;
           margin: auto;
-          font-size: 25px;
-          font-family: "Concert One";
-          margin-bottom: 20px;
+
+          img {
+            width: 300px;
+            margin: auto;
+            cursor: pointer;
+          }
+
+          img:hover {
+            transform: scale(1.2);
+          }
+
+          strong.menu-coment {
+            margin: auto;
+            font-size: 25px;
+            font-family: "Concert One";
+            margin-bottom: 20px;
           }
         }
       }
@@ -254,22 +253,58 @@ section.sessao-menu {
   }
 }
 
-
-rodape.rodape-donuts {
-  background-color:  #00FF7F;
-
-    div.objetos-rodape-donuts {
-      img {
-        
-    }
+footer.rodape-menu {
+  display: flex;
+  justify-content: center;
+  button.botao-comprar-menu {
+    width: 130px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 30px;
+    border: outset 3px var(--cortexto-boxshadow);
+    box-shadow: 3px 2px 7px 1px;
+    margin: 25px;
+    cursor: pointer;
+    font-family: "Bebas Neue";
   }
 }
 
-
-
-  hr.hr-cardapio {
-    margin-bottom: 70px ;
-    border: 3px outset var(--bordaperfilsocial-divisoesdonuts);
+dialog {
+  margin: auto;
+  h2.comprar-menu {
+    text-align: center;
+    text-transform: uppercase;
   }
+  div.dialog-edit {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 500px);
+    justify-items: center;
 
-
+    div.imagem-menu-dialog {
+      display: grid;
+      justify-items: center;
+      img.dialog-menu {
+        width: 200px;
+      }
+      button.botao-comprar {
+        width: 150px;
+        height: 30px;
+        border-radius: 30px;
+        cursor: pointer;
+      }
+      strong.nome-menu-dialog {
+        margin: 10px;
+        text-transform: uppercase;
+      }
+    }
+    button.fechar {
+      width: 100px;
+      height: 40px;
+      font-size: 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 60px;
+    }
+  }
+}
