@@ -7,7 +7,7 @@
   --textodonutsnatal: #dc143c;
   --bordaperfilsocial-divisoesdonuts: #8b008b;
   --Chocolate: #d2691e;
-  --DarkRed: #8b0000;
+  --divisao-bordaperfil: #8b0000;
   --divisaodonuts: #dda0dd;
   --DarkOrange: #ff8c00;
   --Brown: #a52a2a;
@@ -89,7 +89,7 @@ main.principal {
       height: 900px;
       border-bottom: outset 10px var(--Crimson);
       box-shadow: 2px 2px 2px 2px;
-      margin: 0px;
+      margin: auto;
     }
 
     div.botoes {
@@ -166,7 +166,7 @@ footer.rodape-index {
 }
 
 header.topo-social {
-  background-image: url(/css/gradiante-social.png);
+  background-image: url(/imagens-rede-social/veltvet-gradient-header.png);
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -179,17 +179,80 @@ header.topo-social {
       width: 100px;
       margin: 20px;
       border-radius: 70px;
-      border: outset 5px var(--bordaperfilsocial);
+      border: outset 2px var(--divisao-bordaperfil);
       cursor: pointer;
+      box-shadow: 2px 1px 2px 2px;
     }
     img:hover {
       transform: scale(1.2);
     }
   }
+  hr.divisao {
+    border: solid 2px var(--cortexto-boxshadow);
+  }
 }
 
-main.principal-social {
-  background-color: var(--fundomainsocial);
+.bodymain-social {
+  background-image: url(/imagens-rede-social/velvet-gradient-body.png);
+
+  main.principal-social {
+    /* background-color: var(--fundomainsocial); */
+
+    div.aba-meuperfil {
+      width: 350px;
+      height: 767px;
+      position: fixed;
+      z-index: -1;
+      background-image: url(/imagens-rede-social/velvet-gradient.png);
+      margin: auto;
+      box-shadow: 0px 0px 0px 4px;
+      font-family: "Oleo Script";
+
+      div.aba-meuperfil-v1 {
+        display: flex;
+        flex-direction: column;
+        gap: 110px;
+        margin: 20px;
+
+        div.home-social {
+          display: flex;
+          strong.nome-icones-social {
+            margin: auto 0;
+            text-transform: uppercase;
+            margin-left: 20px;
+          }
+        }
+        div.lupa-social {
+          display: flex;
+          strong.nome-icones-social {
+            margin: auto 0;
+            text-transform: uppercase;
+            margin-left: 15px;
+          }
+        }
+        div.sino-social {
+          display: flex;
+          strong.nome-icones-social {
+            margin: auto 0;
+            text-transform: uppercase;
+            margin-left: 10px;
+          }
+        }
+        div.meu-perfil-icone {
+          display: flex;
+          img {
+            border-radius: 30px;
+            box-shadow: 2px 2px 2px 2px var(--divisao-bordaperfil);
+          }
+          strong.nome-icones-social {
+            margin: auto 0;
+            text-transform: uppercase;
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
 }
 
 header.topo-menu {
@@ -305,6 +368,50 @@ dialog {
       border-radius: 30px;
       cursor: pointer;
       margin: 60px;
+    }
+  }
+}
+
+/*RESPONSIVIDADE*/
+@media (max-width: 320px) {
+  header.cabeçalho {
+    div.imagem-logo {
+      img.logo {
+        position: relative;
+        left: 0px;
+        width: 60px;
+      }
+    }
+    h1.titulo-principal {
+      font-size: 20px;
+      text-align: center;
+      bottom: 40px;
+    }
+    ul.lista-header {
+      li.lista {
+        position: relative;
+        img.carrinho {
+          width: 30px;
+          left: 230px;
+          bottom: 30px;
+        }
+      }
+    }
+  }
+  main.principal {
+    div.imagem-principal {
+      div.botoes {
+        left: 40px;
+      }
+    }
+  }
+  footer.rodape-index {
+    div.edicao-rodape {
+      div.icone-rodape {
+        strong.comentario-rodape-index {
+          font-size: 20px;
+        }
+      }
     }
   }
 }
