@@ -169,12 +169,16 @@ header.topo-social {
   background-image: url(/imagens-rede-social/veltvet-gradient-header.png);
   background-repeat: no-repeat;
   background-size: cover;
-
   row-gap: 20px;
+  z-index: -1;
+  position: fixed;
+  width: 100%;
   div.topo-perfis {
     display: flex;
+    gap: 70px;
     justify-content: center;
-    gap: 40px;
+    font-family: "Oleo Script";
+    font-size: 20px;
     img {
       width: 100px;
       margin: 20px;
@@ -186,6 +190,12 @@ header.topo-social {
     img:hover {
       transform: scale(1.2);
     }
+    div.perfil-topo {
+      strong.nome-perfil-topo {
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
   hr.divisao {
     border: solid 2px var(--cortexto-boxshadow);
@@ -196,13 +206,11 @@ header.topo-social {
   background-image: url(/imagens-rede-social/velvet-gradient-body.png);
 
   main.principal-social {
-    /* background-color: var(--fundomainsocial); */
-
     div.aba-meuperfil {
       width: 350px;
       height: 767px;
       position: fixed;
-      z-index: -1;
+      bottom: -36px;
       background-image: url(/imagens-rede-social/velvet-gradient.png);
       margin: auto;
       box-shadow: 0px 0px 0px 4px;
@@ -220,6 +228,9 @@ header.topo-social {
             margin: auto 0;
             text-transform: uppercase;
             margin-left: 20px;
+          }
+          img:hover {
+            transform: scale(1.2);
           }
         }
         div.lupa-social {
@@ -250,6 +261,28 @@ header.topo-social {
             margin-left: 20px;
           }
         }
+      }
+    }
+    div.postagem-principal {
+      position: absolute;
+      left: 700px;
+      bottom: 200px;
+      div.postagem-perfil {
+        display: flex;
+        img.perfil-postagem {
+          border-radius: 70px;
+          border: solid 3px var(--cortexto-boxshadow);
+          margin-bottom: 10px;
+        }
+        strong.nome-postagem-perfil {
+          margin: auto 0;
+          margin-left: 20px;
+          font-size: 25px;
+          font-family: "Oleo Script";
+        }
+      }
+      img.postagem-corpo {
+        border: solid 3px var(--cortexto-boxshadow);
       }
     }
   }
