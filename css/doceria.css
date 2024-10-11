@@ -21,6 +21,8 @@
   --main-donuts: #fd94fd;
   --divsdonuts: #d8bfd8;
   --donutsnatal-shadowspan: #00ff7f;
+  --bordapostagem: #00008b;
+  --velvet: #902c3e;
 }
 
 header.cabeçalho {
@@ -166,7 +168,7 @@ footer.rodape-index {
 }
 
 header.topo-social {
-  background-image: url(/imagens-rede-social/veltvet-gradient-header.png);
+  background-image: url(/imagens-rede-social/gradiante-topo-social.png);
   background-repeat: no-repeat;
   background-size: cover;
   row-gap: 20px;
@@ -202,8 +204,10 @@ header.topo-social {
   }
 }
 
-.bodymain-social {
-  background-image: url(/imagens-rede-social/velvet-gradient-body.png);
+body.bodymain-social {
+  background-image: url(/imagens-rede-social/velvet-background-post.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
 
   main.principal-social {
     div.aba-meuperfil {
@@ -211,11 +215,12 @@ header.topo-social {
       height: 767px;
       position: fixed;
       bottom: -36px;
-      background-image: url(/imagens-rede-social/velvet-gradient.png);
       margin: auto;
       box-shadow: 0px 0px 0px 4px;
       font-family: "Oleo Script";
-
+      background-image: url(/imagens-rede-social/velvete-gradiante.png);
+      background-size: cover;
+      
       div.aba-meuperfil-v1 {
         display: flex;
         flex-direction: column;
@@ -266,7 +271,7 @@ header.topo-social {
     div.postagem-principal {
       position: absolute;
       left: 700px;
-      bottom: 200px;
+      bottom: 100px;
       div.postagem-perfil {
         display: flex;
         img.perfil-postagem {
@@ -283,6 +288,9 @@ header.topo-social {
       }
       img.postagem-corpo {
         border: solid 3px var(--cortexto-boxshadow);
+        border-radius: 50px;
+        border: outset 5px var(--bordapostagem);
+        box-shadow: 3px 5px 7px 6px;
       }
     }
   }
@@ -303,9 +311,6 @@ header.topo-menu {
 }
 
 body.corpo-donuts {
-  /*background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(221,160,221,1) 0%, rgba(255,105,180,1) 15%, rgba(244,64,154,1) 51%, rgba(255,105,180,1) 82%, rgba(221,160,221,1) 100%, rgba(139,0,139,1) 100%);
-  */
   background-color: var(--fundodonuts);
 }
 
