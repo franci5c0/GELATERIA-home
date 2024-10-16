@@ -23,6 +23,7 @@
   --donutsnatal-shadowspan: #00ff7f;
   --bordapostagem: #00008b;
   --velvet: #902c3e;
+  --fundocarrinho: #E0FFFF;
 }
 
 header.cabeçalho {
@@ -406,6 +407,16 @@ dialog {
     }
   }
 }
+
+div.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+}
+
+
+
+
 
 /*RESPONSIVIDADE*/
 @media (max-width: 320px) {
