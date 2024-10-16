@@ -1,15 +1,11 @@
-
-
 const button = document.querySelector("button");
 const modal = document.querySelector("dialog");
 const buttonClose = document.getElementById("fechar");
 button.onclick = function () {
-    modal.showModal()
-}
+  modal.showModal();
+};
 
 buttonClose.onclick = function () {
-    modal.close()
-}
+  modal.close();
+};
 
-
-let mymodal = document.getElementById("myModal")
