@@ -23,7 +23,7 @@
   --donutsnatal-shadowspan: #00ff7f;
   --bordapostagem: #00008b;
   --velvet: #902c3e;
-  --fundocarrinho: #E0FFFF;
+  --fundocarrinho: #e0ffff;
 }
 
 header.cabeçalho {
@@ -52,31 +52,8 @@ header.cabeçalho {
     color: rgb(255, 208, 0);
     filter: drop-shadow(5px 0px 10px rgb(233, 187, 36));
   }
-
-  ul.lista-header {
-    li.lista {
-      list-style: none;
-      position: relative;
-      top: 30px;
-
-      img {
-        &.carrinho {
-          width: 100px;
-          position: absolute;
-          left: 1400px;
-          bottom: 88px;
-        }
-
-        &.contato {
-          width: 70px;
-          position: absolute;
-          left: 1645px;
-          bottom: 77px;
-        }
-      }
-    }
-  }
 }
+
 
 .hr {
   /*LINHA DE SEPARAÇÃO*/
@@ -405,17 +382,20 @@ dialog {
       cursor: pointer;
       margin: 60px;
     }
+    button.botao-carrinho {
+      width: 100px;
+      height: 40px;
+      font-size: 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 60px;
+    }
   }
 }
 
-div.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
+main.carrinho {
+  
 }
-
-
-
 
 
 /*RESPONSIVIDADE*/
