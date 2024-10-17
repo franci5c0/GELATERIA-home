@@ -7,7 +7,6 @@ dotenv.config();//carrega as variáveis definidas no arquivo .env para process.e
 //IMPORTANDO AS BIBLIOTECAS
 const express = require('express');//importa o framework express
 
-
 //importando e armazenando o cors na constante cors
 const cors = require('cors');//importa o pacote cors para permitir requisições de diferentes origens
 
@@ -30,6 +29,8 @@ const donutRoutes = require('./routes/donuts');//importa a rota da forma dos don
 const cupcakeRoutes = require('./routes/cupcakes');//importa a rota da forma dos cupcakes
 
 const cadastroRoutes = require('./routes/cadastro');//importa a rota da forma dos cadastros
+
+const authRoutes = require('./routes/auth'); // Importa as rotas de autenticação
 
 //CONFIGURANDO AS VARIÁVEIS DE AMBIENTE
 dotenv.config();//carrega as variáveis definidas no arquivo .env para process.env
@@ -56,16 +57,15 @@ app.use('/api/cupcakes', cupcakeRoutes);
 
 app.use('/api/cadastro', cadastroRoutes);
 
+app.use('/api/auth', authRoutes); // Configura o servidor para usar as rotas de autenticação 
 
 // Servir arquivos estáticos da pasta 'public'
 app.use(express.static('public')); // Configura o middleware 'express.static' para servir arquivos estáticos (como HTML, CSS, JS, imagens) da pasta 'public'.
-
 
 //ROTA INICIAL PARA TESTAR O SERVIDOR
 // app.get('/',(req, res) => {
 // res.send('o servidor está rodando');//define uma rota inicial para testar o servidor
 // });
-
 
 // Define uma rota GET para o caminho raiz ('/'), que envia o arquivo 'index.html' da pasta 'public' como resposta ao cliente.
 app.get('/', (req, res) => {
