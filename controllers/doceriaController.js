@@ -160,8 +160,33 @@ const addPagamento = (req, res) => {
   );
   };
 
+//obter todos os donuts
+  const getAllDonuts = (req, res) => {
+    db.query('SELECT * FROM donuts', (err, results) => {
+    if(err) {
+    console.error('Erro ao obter os donuts:', err);
+    res.status(500).send('Erro ao obter os donuts');
+    return;
+    }
+    res.json(results);
+    });
+    };
 
 
+    //obter todos os cupcakes
+    const getAllCupcakes = (req, res) => {
+      db.query('SELECT * FROM donuts', (err, results) => {
+      if(err) {
+      console.error('Erro ao obter os donuts:', err);
+      res.status(500).send('Erro ao obter os donuts');
+      return;
+      }
+      res.json(results);
+      });
+      };
+
+
+      //obter os cadastros
 const getAllCadastro = (req, res) => {
   db.query('SELECT * FROM cadastro', (err, results) => {
   if(err) {
@@ -174,7 +199,7 @@ const getAllCadastro = (req, res) => {
   };
 
 
-
+  //deletar um cadastro
 const deleteCadastro = (req, res) => { 
   const { id } = req.params; 
   db.query('DELETE FROM cadastro WHERE id = ?', [id], (err, results) => { 
@@ -188,7 +213,41 @@ const deleteCadastro = (req, res) => {
 }; 
 
 
+//*ADICIONAR um cadastro*//
+const addCadastro = (req, res) => {
+  const {nome_cadastro, email, senha} = req.body;
 
+  // Verifica se o cliente já está cadastrado
+  db.query(
+      'SELECT * FROM cadastro WHERE email = ?',
+      [email],
+      (err, result) => {
+          if (err) {
+              console.error('ERRO AO VERIFICAR O CADASTRO', err);
+              res.status(500).send('ERRO AO VERIFICAR O CADASTRO');
+              return;
+          }
+          if (result.length > 0) {
+              res.status(400).send('cliente já cadastrado');
+              return;
+          }
+
+          // Insere um novo cliente
+          db.query(
+              'INSERT INTO cadastro (nome_cadastro, email, senha) VALUES (?, ?, ?)',
+              [nome_cadastro, email, senha],
+              (err, result) => {
+                  if (err) {
+                      console.error('ERRO AO ADICIONAR CADASTRO', err);
+                      res.status(500).send('ERRO AO ADICIONAR CADASTRO');
+                      return;
+                  }
+                  res.status(201).send('cadastro adicionado com sucesso'); // Retorna sucesso
+              }
+          );
+      }
+  );
+};
 
 
 
@@ -198,6 +257,11 @@ getAllBolos,
 getAllPedidos,
 getAllCarrinho_bolos,
 getAllPagamento,
+getAllDonuts,
+getAllCupcakes,
+getAllCadastro,
+addCadastro,
+deleteCadastro,
 addPedidos,
 addCarrinho_bolos,
 addPagamento,

@@ -25,14 +25,11 @@ const carrinhoRoutes = require('./routes/carrinho');//importa a rota do carrinho
 
 const pagamentoRoutes = require('./routes/pagamento')//importa a rota da forma de pagamento
 
-//ANOTAÇÕES//
+const donutRoutes = require('./routes/donuts');//importa a rota da forma dos donuts
 
-//o EXPRESS é utilizado para criar e gerenciar servidores web e APIs
+const cupcakeRoutes = require('./routes/cupcakes');//importa a rota da forma dos cupcakes
 
-//o DOTENV é utilizado para gerenciar variáveis de ambiente, como credenciais de banco de dados
-
-//o BODY-PARSER é utilizado para analisar o corpo das requisições HTTP, permitindo que o servidor manipule dados enviados pelo cliente
-
+const cadastroRoutes = require('./routes/cadastro');//importa a rota da forma dos cadastros
 
 //CONFIGURANDO AS VARIÁVEIS DE AMBIENTE
 dotenv.config();//carrega as variáveis definidas no arquivo .env para process.env
@@ -47,19 +44,33 @@ app.use(bodyParser.json());//configura o body-parser para analisar requisições
 //usar as rotas da tabela para todas as requisições que começam com /api/bolos
 app.use('/api/bolos', boloRoutes);
 
-//usar tas rotas da tabela de pedidos para todas as requisições que começam com /api/pedidos
 app.use('/api/pedidos', pedidosRoutes);
 
-//usar tas rotas da tabela de pedidos para todas as requisições que começam com /api/carrinho
 app.use('/api/carrinho', carrinhoRoutes);
 
-//usar tas rotas da tabela de pedidos para todas as requisições que começam com /api/pagamento
 app.use('/api/pagamento', pagamentoRoutes);
 
+app.use('/api/donuts', donutRoutes);
+
+app.use('/api/cupcakes', cupcakeRoutes);
+
+app.use('/api/cadastro', cadastroRoutes);
+
+
+// Servir arquivos estáticos da pasta 'public'
+app.use(express.static('public')); // Configura o middleware 'express.static' para servir arquivos estáticos (como HTML, CSS, JS, imagens) da pasta 'public'.
+
+
 //ROTA INICIAL PARA TESTAR O SERVIDOR
-app.get('/',(req, res) => {
-res.send('o servidor está rodando');//define uma rota inicial para testar o servidor
-});
+// app.get('/',(req, res) => {
+// res.send('o servidor está rodando');//define uma rota inicial para testar o servidor
+// });
+
+
+// Define uma rota GET para o caminho raiz ('/'), que envia o arquivo 'index.html' da pasta 'public' como resposta ao cliente.
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html'); // Servir o arquivo index.html como a página inicial
+  });
 
 // Configura o servidor para escutar em uma porta específica 
 const PORT = process.env.PORT || 3500; // Define a porta a par r da variável de ambiente ou usa a porta 3000 como padrão 
