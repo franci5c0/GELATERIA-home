@@ -10,7 +10,6 @@ const express = require('express');//importa o framework express
 //importando e armazenando o cors na constante cors
 const cors = require('cors');//importa o pacote cors para permitir requisições de diferentes origens
 
-
 //importando e armazenando o body-parser na constante bodyParser
 const bodyParser = require('body-parser');//importa o pacote body-parser para analisar o corpo das requisições HTTP
 
@@ -27,13 +26,6 @@ const pagamentoRoutes = require('./routes/pagamento')//importa a rota da forma d
 const donutRoutes = require('./routes/donuts');//importa a rota da forma dos donuts
 
 const cupcakeRoutes = require('./routes/cupcakes');//importa a rota da forma dos cupcakes
-
-const cadastroRoutes = require('./routes/cadastro');//importa a rota da forma dos cadastros
-
-const authRoutes = require('./routes/auth'); // Importa as rotas de autenticação
-
-//CONFIGURANDO AS VARIÁVEIS DE AMBIENTE
-dotenv.config();//carrega as variáveis definidas no arquivo .env para process.env
 
 //INICIALIZANDO UMA NOVA APLICAÇÃO EXPRESS
 const app = express();//inicializa uma nova aplicação express
@@ -55,23 +47,29 @@ app.use('/api/donuts', donutRoutes);
 
 app.use('/api/cupcakes', cupcakeRoutes);
 
-app.use('/api/cadastro', cadastroRoutes);
-
-app.use('/api/auth', authRoutes); // Configura o servidor para usar as rotas de autenticação 
-
 // Servir arquivos estáticos da pasta 'public'
 app.use(express.static('public')); // Configura o middleware 'express.static' para servir arquivos estáticos (como HTML, CSS, JS, imagens) da pasta 'public'.
 
-//ROTA INICIAL PARA TESTAR O SERVIDOR
-// app.get('/',(req, res) => {
+
+// //ROTA INICIAL PARA TESTAR O SERVIDOR
+//  app.get('/',(req, res) => {
 // res.send('o servidor está rodando');//define uma rota inicial para testar o servidor
-// });
+//  });
+  
+  // Servir arquivos CSS da pasta 'css'
+app.use('/css', express.static('css')); // Serve arquivos CSS
+
+// Servir arquivos JS da pasta 'js'
+app.use('/js', express.static('js')); // Serve arquivos JS
+
+// Servir imagens da pasta 'images'
+app.use('/imagens', express.static('imagens')); // Serve arquivos de imagem
 
 // Define uma rota GET para o caminho raiz ('/'), que envia o arquivo 'index.html' da pasta 'public' como resposta ao cliente.
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html'); // Servir o arquivo index.html como a página inicial
   });
-
+  
 // Configura o servidor para escutar em uma porta específica 
 const PORT = process.env.PORT || 3500; // Define a porta a par r da variável de ambiente ou usa a porta 3000 como padrão 
 app.listen(PORT,() => {

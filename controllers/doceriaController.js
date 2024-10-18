@@ -84,11 +84,11 @@ const deletePedidos = (req, res) => {
 
 //CARRINHO*//
 //*ADICIONAR PEDIDO AO CARRINHO*//
-const addCarrinho_bolos = (req, res) => {
-const {ID, nome_bolo, quantidade, preço} = req.body;
+const addCarrinho = (req, res) => {
+const {ID, nome_pedido, quantidade, preço} = req.body;
 db.query(
-  'INSERT INTO carrinho_bolos (ID, nome_bolo, quantidade, preço) VALUES(?, ?, ?, ?)',
-  [ID, nome_bolo, quantidade, preço],
+  'INSERT INTO carrinho (ID, nome_pedido, quantidade, preço) VALUES(?, ?, ?, ?)',
+  [ID, nome_pedido, quantidade, preço],
   (err, results) => {
   if (err) {
     console.error('Erro ao adicionar o pedido ao carrinho', err);
@@ -102,8 +102,8 @@ db.query(
 
 
 //HISTÓRICO DE PEDIDOS DO CARRINHO//
-const getAllCarrinho_bolos = (req, res) => {
-  db.query('SELECT * FROM carrinho_bolos', (err, results) => {
+const getAllCarrinho = (req, res) => {
+  db.query('SELECT * FROM carrinho', (err, results) => {
   if(err) {
   console.error('Erro ao obter o pedido:', err);
   res.status(500).send('Erro ao obter o pedido');
@@ -113,22 +113,6 @@ const getAllCarrinho_bolos = (req, res) => {
   });
   };
 
-
-//FUNÇÃO PARA DELETAR UM PEDIDO DO CARRINHO
-const deleteCarrinho_bolos = (req, res) => { 
-  const { id } = req.params; 
-  db.query('DELETE FROM carrinho_bolos WHERE id = ?', [id], (err, results) => { 
-    if (err) { 
-      console.error('Erro ao deletar o pedido:', err); 
-      res.status(500).send('Erro ao deletar o pedido'); 
-      return; 
-    } 
-    res.send('Pedido deletado com sucesso'); 
-  }); 
-}; 
-
-
-//PAGAMENTO//
 
 //HISTÓRICO DE FORMAS DE PAGAMENTO//
 const getAllPagamento = (req, res) => {
@@ -160,6 +144,7 @@ const addPagamento = (req, res) => {
   );
   };
 
+
 //obter todos os donuts
   const getAllDonuts = (req, res) => {
     db.query('SELECT * FROM donuts', (err, results) => {
@@ -186,86 +171,23 @@ const addPagamento = (req, res) => {
       };
 
 
-      //obter os cadastros
-const getAllCadastro = (req, res) => {
-  db.query('SELECT * FROM cadastro', (err, results) => {
-  if(err) {
-  console.error('Erro ao obter os cadastros:', err);
-  res.status(500).send('Erro ao obter os cadastros');
-  return;
-  }
-  res.json(results);
-  });
-  };
-
-
-  //deletar um cadastro
-const deleteCadastro = (req, res) => { 
-  const { id } = req.params; 
-  db.query('DELETE FROM cadastro WHERE id = ?', [id], (err, results) => { 
-    if (err) { 
-      console.error('Erro ao deletar o cadastro:', err); 
-      res.status(500).send('Erro ao deletar o cadastro'); 
-      return; 
-    } 
-    res.send('Cadastro deletado com sucesso'); 
-  }); 
-}; 
-
-
-//*ADICIONAR um cadastro*//
-const addCadastro = (req, res) => {
-  const {nome_cadastro, email, senha} = req.body;
-
-  // Verifica se o cliente já está cadastrado
-  db.query(
-      'SELECT * FROM cadastro WHERE email = ?',
-      [email],
-      (err, result) => {
-          if (err) {
-              console.error('ERRO AO VERIFICAR O CADASTRO', err);
-              res.status(500).send('ERRO AO VERIFICAR O CADASTRO');
-              return;
-          }
-          if (result.length > 0) {
-              res.status(400).send('cliente já cadastrado');
-              return;
-          }
-
-          // Insere um novo cliente
-          db.query(
-              'INSERT INTO cadastro (nome_cadastro, email, senha) VALUES (?, ?, ?)',
-              [nome_cadastro, email, senha],
-              (err, result) => {
-                  if (err) {
-                      console.error('ERRO AO ADICIONAR CADASTRO', err);
-                      res.status(500).send('ERRO AO ADICIONAR CADASTRO');
-                      return;
-                  }
-                  res.status(201).send('cadastro adicionado com sucesso'); // Retorna sucesso
-              }
-          );
-      }
-  );
-};
-
-
-
-
 module.exports = {
+//GET ALL
 getAllBolos,
 getAllPedidos,
-getAllCarrinho_bolos,
-getAllPagamento,
 getAllDonuts,
 getAllCupcakes,
-getAllCadastro,
-addCadastro,
-deleteCadastro,
+getAllPagamento,
+getAllCarrinho,
+
+//POST
 addPedidos,
-addCarrinho_bolos,
 addPagamento,
+addCarrinho,
+
+//PUT
 updatePedidosPut,
-deletePedidos,
-deleteCarrinho_bolos
+
+//DELETE
+deletePedidos
 };
