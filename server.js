@@ -72,6 +72,6 @@ app.get('/', (req, res) => {
   
 // Configura o servidor para escutar em uma porta específica 
 const PORT = process.env.PORT || 3500; // Define a porta a par r da variável de ambiente ou usa a porta 3000 como padrão 
-app.listen(PORT,() => {
+app.listen(3500, '0.0.0.0', () => {
 console.log(`servidor rodando na porta ${PORT}`);
 }); //escreve uma mensagem informando que o servidor está rodando
