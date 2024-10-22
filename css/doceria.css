@@ -32,14 +32,6 @@ header.cabeçalho {
   background-size: cover;
   filter: brightness(120%);
 
-  div.imagem-logo {
-    img.logo {
-      position: relative;
-      left: 200px;
-      top: 30px;
-    }
-  }
-
   h1.titulo-principal {
     /*H1*/
     font-size: 60px;
@@ -401,7 +393,4 @@ dialog {
       margin: 60px;
     }
   }
-}
-
-@media (max-width: 1366px) {
 }
