@@ -1,15 +1,19 @@
 const db = require('../config/db');//importa a conexão com o banco de dados
 
 //FUNÇÃO PARA OBTER TODOS OS BOLOS DA TABELA
-const getAllBolos = (req, res) => {
-db.query('SELECT * FROM bolos', (err, results) => {
+const getAllBolos = (req, res) => { //Define uma função arrows que recebe dois parâmetros, req (requisição) e res (resposta). 
 
-if(err) {
+db.query('SELECT * FROM bolos', (err, results) => { // Executa uma query SQL para selecionar todas as transações na tabela transac ons. 
+
+if(err) { //Verifica se houve um erro ao executar a query. Se houve, exibe uma  mensagem de erro no console e envia uma resposta de erro para o cliente. 
+
 console.error('Erro ao obter Bolos:', err);
-res.status(500).send('Erro ao obter Bolos');
+
+res.status(500).send('Erro ao obter Bolos'); // Se a query foi executada com sucesso, envia os resultados como uma resposta JSON para o cliente.
+
 return;
 }
-res.json(results);
+res.json(results);  //xporta a função getAll para que possa ser utlizada em outros arquivos.
 });
 };
 
