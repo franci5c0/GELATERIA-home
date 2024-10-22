@@ -114,7 +114,7 @@ const getAllCarrinho = (req, res) => {
   };
 
 
-//HISTÓRICO DE FORMAS DE PAGAMENTO//
+//HISTÓRICO DAS FORMAS DE PAGAMENTO//
 const getAllPagamento = (req, res) => {
   db.query('SELECT * FROM pagamento', (err, results) => {
   if(err) {
@@ -145,7 +145,7 @@ const addPagamento = (req, res) => {
   };
 
 
-//obter todos os donuts
+//histórico de donuts
   const getAllDonuts = (req, res) => {
     db.query('SELECT * FROM donuts', (err, results) => {
     if(err) {
@@ -158,7 +158,7 @@ const addPagamento = (req, res) => {
     };
 
 
-    //obter todos os cupcakes
+    //histórico de cupcakes
     const getAllCupcakes = (req, res) => {
       db.query('SELECT * FROM donuts', (err, results) => {
       if(err) {
