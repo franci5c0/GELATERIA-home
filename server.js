@@ -34,18 +34,18 @@ const app = express();//inicializa uma nova aplicação express
 app.use(cors());//habilita o CORS para todas as rotas
 app.use(bodyParser.json());//configura o body-parser para analisar requisições JSON
 
-//usar as rotas da tabela para todas as requisições que começam com /api/bolos
-app.use('/api/bolos', boloRoutes);
 
-app.use('/api/pedidos', pedidosRoutes);
+app.use('/api/bolos', boloRoutes);//usar as rotas da tabela para todas as requisições que começam com /api/bolos
 
-app.use('/api/carrinho', carrinhoRoutes);
+app.use('/api/pedidos', pedidosRoutes);//usar as rotas da tabela para todas as requisições que começam com /api/pedidos
 
-app.use('/api/pagamento', pagamentoRoutes);
+app.use('/api/carrinho', carrinhoRoutes);//usar as rotas da tabela para todas as requisições que começam com /api/carrinho
 
-app.use('/api/donuts', donutRoutes);
+app.use('/api/pagamento', pagamentoRoutes);//usar as rotas da tabela para todas as requisições que começam com /api/pagamento
 
-app.use('/api/cupcakes', cupcakeRoutes);
+app.use('/api/donuts', donutRoutes);//usar as rotas da tabela para todas as requisições que começam com /api/donuts
+
+app.use('/api/cupcakes', cupcakeRoutes);//usar as rotas da tabela para todas as requisições que começam com /api/cupcakes
 
 // Servir arquivos estáticos da pasta 'public'
 app.use(express.static('public')); // Configura o middleware 'express.static' para servir arquivos estáticos (como HTML, CSS, JS, imagens) da pasta 'public'.
@@ -56,11 +56,9 @@ app.use(express.static('public')); // Configura o middleware 'express.static' pa
 // res.send('o servidor está rodando');//define uma rota inicial para testar o servidor
 //  });
   
+
   // Servir arquivos CSS da pasta 'css'
 app.use('/css', express.static('css')); // Serve arquivos CSS
-
-// Servir arquivos JS da pasta 'js'
-app.use('/js', express.static('js')); // Serve arquivos JS
 
 // Servir imagens da pasta 'images'
 app.use('/imagens', express.static('imagens')); // Serve arquivos de imagem
