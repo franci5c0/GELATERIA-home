@@ -3,7 +3,7 @@ const db = require('../config/db');//importa a conexão com o banco de dados
 //FUNÇÃO PARA OBTER TODOS OS BOLOS DA TABELA
 const getAllBolos = (req, res) => { //Define uma função arrows que recebe dois parâmetros, req (requisição) e res (resposta). 
 
-db.query('SELECT * FROM bolos', (err, results) => { // Executa uma query SQL para selecionar todas as transações na tabela transac ons. 
+db.query('SELECT * FROM bolos', (err, results) => { // Executa uma query SQL para selecionar todos dados na tabela. 
 
 if(err) { //Verifica se houve um erro ao executar a query. Se houve, exibe uma  mensagem de erro no console e envia uma resposta de erro para o cliente. 
 
