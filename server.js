@@ -10,7 +10,6 @@ const express = require('express');//importa o framework express
 //importando e armazenando o cors na constante cors
 const cors = require('cors');//importa o pacote cors para permitir requisições de diferentes origens
 
-
 //importando e armazenando o body-parser na constante bodyParser
 const bodyParser = require('body-parser');//importa o pacote body-parser para analisar o corpo das requisições HTTP
 
@@ -28,13 +27,6 @@ const donutRoutes = require('./routes/donuts');//importa a rota da forma dos don
 
 const cupcakeRoutes = require('./routes/cupcakes');//importa a rota da forma dos cupcakes
 
-const cadastroRoutes = require('./routes/cadastro');//importa a rota da forma dos cadastros
-
-const authRoutes = require('./routes/auth'); // Importa as rotas de autenticação
-
-//CONFIGURANDO AS VARIÁVEIS DE AMBIENTE
-dotenv.config();//carrega as variáveis definidas no arquivo .env para process.env
-
 //INICIALIZANDO UMA NOVA APLICAÇÃO EXPRESS
 const app = express();//inicializa uma nova aplicação express
 
@@ -42,38 +34,42 @@ const app = express();//inicializa uma nova aplicação express
 app.use(cors());//habilita o CORS para todas as rotas
 app.use(bodyParser.json());//configura o body-parser para analisar requisições JSON
 
-//usar as rotas da tabela para todas as requisições que começam com /api/bolos
-app.use('/api/bolos', boloRoutes);
 
-app.use('/api/pedidos', pedidosRoutes);
+app.use('/api/bolos', boloRoutes);//usar as rotas da tabela para todas as requisições que começam com /api/bolos
 
-app.use('/api/carrinho', carrinhoRoutes);
+app.use('/api/pedidos', pedidosRoutes);//usar as rotas da tabela para todas as requisições que começam com /api/pedidos
 
-app.use('/api/pagamento', pagamentoRoutes);
+app.use('/api/carrinho', carrinhoRoutes);//usar as rotas da tabela para todas as requisições que começam com /api/carrinho
 
-app.use('/api/donuts', donutRoutes);
+app.use('/api/pagamento', pagamentoRoutes);//usar as rotas da tabela para todas as requisições que começam com /api/pagamento
 
-app.use('/api/cupcakes', cupcakeRoutes);
+app.use('/api/donuts', donutRoutes);//usar as rotas da tabela para todas as requisições que começam com /api/donuts
 
-app.use('/api/cadastro', cadastroRoutes);
-
-app.use('/api/auth', authRoutes); // Configura o servidor para usar as rotas de autenticação 
+app.use('/api/cupcakes', cupcakeRoutes);//usar as rotas da tabela para todas as requisições que começam com /api/cupcakes
 
 // Servir arquivos estáticos da pasta 'public'
 app.use(express.static('public')); // Configura o middleware 'express.static' para servir arquivos estáticos (como HTML, CSS, JS, imagens) da pasta 'public'.
 
-//ROTA INICIAL PARA TESTAR O SERVIDOR
-// app.get('/',(req, res) => {
+
+// //ROTA INICIAL PARA TESTAR O SERVIDOR
+//  app.get('/',(req, res) => {
 // res.send('o servidor está rodando');//define uma rota inicial para testar o servidor
-// });
+//  });
+  
+
+  // Servir arquivos CSS da pasta 'css'
+app.use('/css', express.static('css')); // Serve arquivos CSS
+
+// Servir imagens da pasta 'images'
+app.use('/imagens', express.static('imagens')); // Serve arquivos de imagem
 
 // Define uma rota GET para o caminho raiz ('/'), que envia o arquivo 'index.html' da pasta 'public' como resposta ao cliente.
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html'); // Servir o arquivo index.html como a página inicial
   });
-
+  
 // Configura o servidor para escutar em uma porta específica 
 const PORT = process.env.PORT || 3500; // Define a porta a par r da variável de ambiente ou usa a porta 3000 como padrão 
-app.listen(PORT,() => {
+app.listen(3500, '0.0.0.0', () => {
 console.log(`servidor rodando na porta ${PORT}`);
 }); //escreve uma mensagem informando que o servidor está rodando
