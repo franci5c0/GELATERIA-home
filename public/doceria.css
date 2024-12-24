@@ -6,13 +6,8 @@
 :root {
   --textodonutsnatal: #dc143c;
   --bordaperfilsocial-divisoesdonuts: #8b008b;
-  --Chocolate: #d2691e;
   --divisao-bordaperfil: #8b0000;
   --divisaodonuts: #dda0dd;
-  --DarkOrange: #ff8c00;
-  --Brown: #a52a2a;
-  --Sienna: #a0522d;
-  --RosyBrown: #bc8f8f;
   --botaoindex: #f4a460;
   --boxshadow: #8b4513;
   --cortexto-boxshadow: #000000;
@@ -24,33 +19,41 @@
   --bordapostagem: #00008b;
   --velvet: #902c3e;
   --fundocarrinho: #e0ffff;
-  --topoindex: #DB7093;
+  --topoindex-rodape-hr: #DB7093;
+  --h1: #8B4513;
+  --hr: #FFC0CB;
 }
 
 header.cabeçalho {
   /* background-image: url(/css/confeitaria-topo.png); */
-  background-color: var(--topoindex);
+  background-color: var(--topoindex-rodape-hr);
   background-repeat: no-repeat;
   background-size: cover;
-  filter: brightness(120%);
+  /* filter: brightness(120%); */
 
   h1.titulo-principal {
-    /*H1*/
     font-size: 70px;
     font-weight: 100;
     font-family: "Lobster";
     text-align: center;
-    position: relative;
     bottom: 70px;
-    color: rgb(255, 208, 0);
-    filter: drop-shadow(5px 0px 10px rgb(233, 187, 36));
+    color: var(--h1);
+    /* filter: drop-shadow(5px 0px 10px rgb(233, 187, 36)); */
+
+  }
+  div.imagem-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    img.logo {
+      width: 150px;
+    }
   }
 }
 
-.hr {
-  /*LINHA DE SEPARAÇÃO*/
-  border: 3px outset var(--DarkOrange);
-  margin: 0px;
+hr.hr {
+  border: outset var(--topoindex-rodape-hr);
+  max-width: 100%;
 }
 
 main.principal {
@@ -73,10 +76,10 @@ main.principal {
 
 footer.rodape-index {
   div.edicao-rodape {
-    background-image: url(/css/confeitaria-topo.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px -400px;
+    background-color: var(--topoindex-rodape-hr);
 
     div.icone-rodape {
       display: flex;
@@ -416,4 +419,3 @@ dialog {
     }
   }
 }
-
