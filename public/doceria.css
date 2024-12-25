@@ -19,9 +19,10 @@
   --bordapostagem: #00008b;
   --velvet: #902c3e;
   --fundocarrinho: #e0ffff;
-  --topoindex-rodape-hr: #DB7093;
-  --h1: #8B4513;
-  --hr: #FFC0CB;
+  --topoindex-rodape-hr: #db7093;
+  --h1: #ffb6c1;
+  --hr: #ffc0cb;
+  --botoesmain: #ffa07a;
 }
 
 header.cabeçalho {
@@ -37,9 +38,11 @@ header.cabeçalho {
     font-family: "Lobster";
     text-align: center;
     bottom: 70px;
+    filter: contrast(200%);
     color: var(--h1);
+    text-shadow: 2px 2px 2px;
+    /* background-image: url(/imagens/bolo-ameixa.png); */
     /* filter: drop-shadow(5px 0px 10px rgb(233, 187, 36)); */
-
   }
   div.imagem-logo {
     display: flex;
@@ -64,9 +67,97 @@ main.principal {
       border-bottom: outset 10px var(--Crimson);
       box-shadow: 2px 2px 2px 2px;
       margin: auto;
-      filter: blur(4px);
+      filter: blur(5px);
+    }
+    div.buttons-main-image {
+      display: flex;
+      flex-direction: row;
+      gap: 110px;
+      position: absolute;
+      top: 250px;
+      margin-left: 5px;
+      button.button-main-image {
+        margin: 20px;
+        width: 230px;
+        height: 70px;
+        text-align: center;
+        top: 250px;
+        border-radius: 20px;
+        font-size: 20px;
+        background-color: var(--botoesmain);
+        box-shadow: 2px 2px 2px 2px;
+        filter: contrast(100%);
+      }
+      div.buttons {
+        text-align: center;
+        font-size: 50px;
+        font-family: "Oleo Script";
+        text-shadow: 5px 4px 3px black;
+        button.donut {
+          background-color: Plum;
+          background-image: url(/imagens/donut-botao.png);
+          background-size: 200px;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        button.cupcake {
+          background-image: url(/imagens/cupcake-botao-main.png);
+          background-size: 200px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: Chocolate;
+        }
+        button.sorvete {
+          background-image: url(/imagens/sorvete-botao-main.png);
+          background-size: 120px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: Pink;
+        }
+        button.bolo {
+          background-image: url(/imagens/bolo-botao-main.png);
+          background-size: 90px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: var(--velvet);
+        }
+        button.docinho {
+          background-image: url(/imagens/docinho-botao-main.png);
+          background-size: 120px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: #ff6f61;
+        }
+        p.name-candy-donut {
+          filter: contrast(100%);
+          color: Plum;
+        }
+        p.name-candy-cupcake {
+          filter: contrast(100%);
+          color: Chocolate;
+        }
+        p.name-candy-sorvete {
+          filter: contrast(100%);
+          color: Pink;
+        }
+        p.name-candy-bolo {
+          filter: contrast(100%);
+          color: var(--velvet);
+        }
+        p.name-candy-docinho {
+          filter: contrast(100%);
+          color: #ff6f61;
+        }
+      }
     }
   }
+}
+
+button:hover {
+  cursor: pointer;
+  transition: all 0.2s;
+   transform: scale(1.2); 
+
 }
 
 .hr-donuts {
