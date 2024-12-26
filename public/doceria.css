@@ -27,7 +27,7 @@
 
 header.cabeçalho {
   /* background-image: url(/css/confeitaria-topo.png); */
-  background-color: #5e0b2f;
+  background-color: #601a28;
   background-repeat: no-repeat;
   background-size: cover;
   /* filter: brightness(120%); */
@@ -59,92 +59,117 @@ hr.hr {
 }
 
 main.principal {
-  div.imagem-principal {
-    height: 700px;
-    background-image: url(/imagens/fundo-div-main.jpeg);
-    filter: blur(4px);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  div.buttons-main-image {
-    display: flex;
-    flex-direction: row;
-    gap: 110px;
-    position: absolute;
-    top: 250px;
-    margin-left: 5px;
-    button.button-main-image {
-      margin: 20px;
-      width: 230px;
-      height: 70px;
-      text-align: center;
-      top: 250px;
-      border-radius: 20px;
-      font-size: 20px;
-      background-color: var(--botoesmain);
-      box-shadow: 2px 2px 2px 2px;
-      filter: contrast(100%);
+  div.div-principal {
+    div.imagem-principal {
+      height: 700px;
+      background-image: url(/imagens/fundo-div-main.jpeg);
+      filter: blur(4px);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
     }
-    div.buttons {
-      text-align: center;
-      font-size: 50px;
-      font-family: "Oleo Script";
-      text-shadow: 5px 4px 3px black;
-      button.donut {
-        background-color: Plum;
-        background-image: url(/imagens/donut-botao.png);
-        background-size: 200px;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-      button.cupcake {
-        background-image: url(/imagens/cupcake-botao-main.png);
-        background-size: 200px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: Chocolate;
-      }
-      button.sorvete {
-        background-image: url(/imagens/sorvete-botao-main.png);
-        background-size: 120px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: Pink;
-      }
-      button.bolo {
-        background-image: url(/imagens/bolo-botao-main.png);
-        background-size: 90px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: var(--velvet);
-      }
-      button.docinho {
-        background-image: url(/imagens/docinho-botao-main.png);
-        background-size: 120px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: #ff6f61;
-      }
-      p.name-candy-donut {
+    div.buttons-main-image {
+      display: flex;
+      flex-direction: row;
+      gap: 110px;
+      position: absolute;
+      top: 250px;
+      margin-left: 5px;
+      button.button-main-image {
+        margin: 20px;
+        width: 230px;
+        height: 70px;
+        text-align: center;
+        top: 250px;
+        border-radius: 20px;
+        font-size: 20px;
+        background-color: var(--botoesmain);
+        box-shadow: 2px 2px 2px 2px;
         filter: contrast(100%);
-        color: Plum;
       }
-      p.name-candy-cupcake {
-        filter: contrast(100%);
-        color: Chocolate;
+      div.buttons {
+        text-align: center;
+        font-size: 50px;
+        font-family: "Oleo Script";
+        text-shadow: 5px 4px 3px black;
+        button.donut {
+          background-color: Plum;
+          background-image: url(/imagens/donut-botao.png);
+          background-size: 200px;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        button.cupcake {
+          background-image: url(/imagens/cupcake-botao-main.png);
+          background-size: 200px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: Chocolate;
+        }
+        button.sorvete {
+          background-image: url(/imagens/sorvete-botao-main.png);
+          background-size: 120px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: Pink;
+        }
+        button.bolo {
+          background-image: url(/imagens/bolo-botao-main.png);
+          background-size: 90px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: var(--velvet);
+        }
+        button.docinho {
+          background-image: url(/imagens/docinho-botao-main.png);
+          background-size: 120px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: #ff6f61;
+        }
+        p.name-candy-donut {
+          filter: contrast(100%);
+          color: Plum;
+        }
+        p.name-candy-cupcake {
+          filter: contrast(100%);
+          color: Chocolate;
+        }
+        p.name-candy-sorvete {
+          filter: contrast(100%);
+          color: Pink;
+        }
+        p.name-candy-bolo {
+          filter: contrast(100%);
+          color: var(--velvet);
+        }
+        p.name-candy-docinho {
+          filter: contrast(100%);
+          color: #ff6f61;
+        }
       }
-      p.name-candy-sorvete {
-        filter: contrast(100%);
-        color: Pink;
+    }
+    div.especiais-da-casa {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 40px;
+      div.titulo-especial-casa {
+        text-align: center;
+        h2.titulo-especial {
+        }
       }
-      p.name-candy-bolo {
-        filter: contrast(100%);
-        color: var(--velvet);
-      }
-      p.name-candy-docinho {
-        filter: contrast(100%);
-        color: #ff6f61;
+      div.especial {
+        /* background-color: #000000; */
+       display: flex;
+       flex-direction: row;
+        position: absolute;
+        left: 60px;
+        bottom: 100px;
+        img.imagem-especial {
+          width: 250px;
+        }
       }
     }
   }
@@ -166,7 +191,7 @@ footer.rodape-index {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px -400px;
-    background-color: #5e0b2f;
+    background-color: #601a28;
 
     div.icone-rodape {
       display: flex;
