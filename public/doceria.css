@@ -27,7 +27,7 @@
 
 header.cabeçalho {
   /* background-image: url(/css/confeitaria-topo.png); */
-  background-color: #601a28;
+  background-color: #4a0404;
   background-repeat: no-repeat;
   background-size: cover;
   /* filter: brightness(120%); */
@@ -37,8 +37,7 @@ header.cabeçalho {
     font-weight: 100;
     font-family: "Lobster";
     text-align: center;
-    bottom: 70px;
-    filter: contrast(200%);
+    /* filter: contrast(200%); */
     color: var(--h1);
     text-shadow: 2px 2px 2px;
     /* filter: drop-shadow(5px 0px 10px rgb(233, 187, 36)); */
@@ -58,476 +57,314 @@ hr.hr {
   max-width: 100%;
 }
 
-main.principal {
-  div.div-principal {
-    div.imagem-principal {
-      height: 700px;
-      background-image: url(/imagens/fundo-div-main.jpeg);
-      filter: blur(4px);
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-    div.buttons-main-image {
-      display: flex;
-      flex-direction: row;
-      gap: 110px;
-      position: absolute;
-      top: 250px;
-      margin-left: 5px;
-      button.button-main-image {
-        margin: 20px;
-        width: 230px;
-        height: 70px;
-        text-align: center;
-        top: 250px;
-        border-radius: 20px;
-        font-size: 20px;
-        background-color: var(--botoesmain);
-        box-shadow: 2px 2px 2px 2px;
-        filter: contrast(100%);
-      }
-      div.buttons {
-        text-align: center;
-        font-size: 50px;
-        font-family: "Oleo Script";
-        text-shadow: 5px 4px 3px black;
-        button.donut {
-          background-color: Plum;
-          background-image: url(/imagens/donut-botao.png);
-          background-size: 200px;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-        button.cupcake {
-          background-image: url(/imagens/cupcake-botao-main.png);
-          background-size: 200px;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-color: Chocolate;
-        }
-        button.sorvete {
-          background-image: url(/imagens/sorvete-botao-main.png);
-          background-size: 120px;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-color: Pink;
-        }
-        button.bolo {
-          background-image: url(/imagens/bolo-botao-main.png);
-          background-size: 90px;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-color: var(--velvet);
-        }
-        button.docinho {
-          background-image: url(/imagens/docinho-botao-main.png);
-          background-size: 120px;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-color: #ff6f61;
-        }
-        p.name-candy-donut {
-          filter: contrast(100%);
-          color: Plum;
-        }
-        p.name-candy-cupcake {
-          filter: contrast(100%);
-          color: Chocolate;
-        }
-        p.name-candy-sorvete {
-          filter: contrast(100%);
-          color: Pink;
-        }
-        p.name-candy-bolo {
-          filter: contrast(100%);
-          color: var(--velvet);
-        }
-        p.name-candy-docinho {
-          filter: contrast(100%);
-          color: #ff6f61;
-        }
-      }
-    }
-    div.especiais-da-casa {
-      position: absolute;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      margin: 40px;
-      div.titulo-especial-casa {
-        text-align: center;
-        h2.titulo-especial {
-        }
-      }
-      div.especial {
-        /* background-color: #000000; */
-       display: flex;
-       flex-direction: row;
-        position: absolute;
-        left: 60px;
-        bottom: 100px;
-        img.imagem-especial {
-          width: 250px;
-        }
-      }
-    }
-  }
-}
-
-button:hover {
-  cursor: pointer;
-  transition: all 0.2s;
-  transform: scale(1.2);
-}
-
-.hr-donuts {
-  margin-bottom: 70px;
-  border: 3px outset var(--divisaodonuts);
-}
-
-footer.rodape-index {
-  div.edicao-rodape {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0px -400px;
-    background-color: #601a28;
-
-    div.icone-rodape {
-      display: flex;
-      justify-content: center;
-
-      img.instagram {
-        width: 200px;
-      }
-      img.instagram:hover {
-        transform: scale(1.2);
-      }
-
-      strong.comentario-rodape-index {
-        font-size: 30px;
-        margin: auto 0;
-        font-family: "Oleo Script";
-      }
-
-      div.pagamento {
-        strong.forma-pagamento {
-          font-size: 60px;
-          font-family: "Dancing Script";
-          color: var(--gold);
-          position: absolute;
-          left: 400px;
-          bottom: 120px;
-        }
-
-        img.pix {
-          position: absolute;
-          left: 580px;
-          width: 70px;
-          bottom: 30px;
-        }
-      }
-    }
-  }
-}
-
-header.topo-social {
-  background-image: url(/imagens/gradiante-topo-social.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  row-gap: 20px;
-  z-index: 1;
-  position: fixed;
-  width: 100%;
-  div.topo-perfis {
-    display: flex;
-    gap: 70px;
-    justify-content: center;
-    font-family: "Oleo Script";
-    font-size: 20px;
-    img {
-      width: 100px;
-      margin: 20px;
-      border-radius: 70px;
-      border: outset 2px var(--divisao-bordaperfil);
-      cursor: pointer;
-      box-shadow: 2px 1px 2px 2px;
-    }
-    img:hover {
-      transform: scale(1.2);
-    }
-    div.perfil-topo {
-      strong.nome-perfil-topo {
-        display: flex;
-        justify-content: center;
-        color: var(--cardapiodonuts-textosocial);
-      }
-    }
-  }
-  hr.divisao {
-    border: solid 2px var(--cortexto-boxshadow);
-  }
-}
-
-body.bodymain-social {
-  background-image: url(/imagens/velvet-background-post.jpeg);
-  background-repeat: no-repeat;
-  background-size: 100% 1500px;
-
-  main.principal-social {
-    div.aba-meuperfil {
-      width: 350px;
-      height: 767px;
-      position: fixed;
-      bottom: -36px;
-      margin: auto;
-      box-shadow: 0px 0px 0px 4px;
-      font-family: "Oleo Script";
-      background-image: url(/imagens/velvete-gradiante.png);
-      background-size: cover;
-      div.aba-meuperfil-v1 {
-        display: flex;
-        flex-direction: column;
-        gap: 110px;
-        color: var(--cardapiodonuts-textosocial);
-        margin: 20px;
-        position: absolute;
-        bottom: 200px;
-        div.home-social {
-          display: flex;
-          strong.nome-icones-social {
-            margin: auto 0;
-            text-transform: uppercase;
-            margin-left: 10px;
-            font-size: 30px;
-          }
-          img:hover {
-            transform: scale(1.2);
-          }
-        }
-      }
-    }
-    div.postagem-principal {
-      div.postagens {
-        text-align: center;
-        position: relative;
-        top: 250px;
-        bottom: 0;
-        left: 650px;
-        right: 0;
-        margin: auto;
-        display: inline-block;
-        div.postagem-perfil {
-          display: flex;
-          justify-content: center;
-          margin-left: -400px;
-          img.perfil-postagem {
-            border-radius: 70px;
-            border: solid 3px var(--cortexto-boxshadow);
-            margin-bottom: 10px;
-          }
-          strong.nome-postagem-perfil {
-            margin: auto 0;
-            margin-left: 20px;
-            font-size: 25px;
-            font-family: "Oleo Script";
-            color: var(--cardapiodonuts-textosocial);
-          }
-        }
-        div.postagem {
-          img.postagem-corpo {
-            border: solid 3px var(--cortexto-boxshadow);
-            border-radius: 50px;
-            border: outset 5px var(--bordapostagem);
-            box-shadow: 3px 5px 7px 6px;
-            margin-bottom: 10px;
-          }
-          p.coment-postagem-perfil {
-            color: var(--cardapiodonuts-textosocial);
-            text-align: center;
-            font-size: 20px;
-            font-family: "Rozha One";
-            text-shadow: 2px 0px 4px;
-          }
-        }
-      }
-    }
-  }
-}
-
-header.topo-menu {
-  text-align: center;
-
-  div.menu-header {
-    margin: 50px;
-
-    h2.menu-header {
-      text-transform: uppercase;
-      font-family: "Bebas Neue";
-      font-size: 50px;
-    }
-  }
-}
-
-body.corpo-donuts {
-  background-color: var(--fundodonuts);
-}
-
-main.principal-menu {
-  section.sessao-menu {
-    div.menu {
-      margin-left: 150px;
-      display: grid;
-      grid-template-columns: repeat(4, 400px);
-
-      div.caixas-menu {
-        box-shadow: 2px 0px 5px 3px var(--cortexto-boxshadow);
-        margin: 20px;
-        border-radius: 20px;
-        background-color: #fffff0;
-
-        div.menu-block {
-          display: flex;
-          flex-direction: column;
-          margin: auto;
-
-          img {
-            width: 300px;
-            margin: auto;
-            cursor: pointer;
-          }
-
-          img:hover {
-            transform: scale(1.2);
-          }
-
-          strong.menu-coment {
-            margin: auto;
-            font-size: 25px;
-            font-family: "Concert One";
-            margin-bottom: 20px;
-          }
-        }
-      }
-    }
-  }
-}
-
-footer.rodape-menu {
-  display: flex;
-  justify-content: center;
-  button.botao-comprar-menu {
-    width: 130px;
-    height: 50px;
-    font-size: 20px;
-    border-radius: 30px;
-    border: outset 3px var(--cortexto-boxshadow);
-    box-shadow: 3px 2px 7px 1px;
-    margin: 25px;
-    cursor: pointer;
-    font-family: "Bebas Neue";
-  }
-  button.botao-carrinho-menu {
-    width: 130px;
-    height: 50px;
-    font-size: 20px;
-    border-radius: 30px;
-    border: outset 3px var(--cortexto-boxshadow);
-    box-shadow: 3px 2px 7px 1px;
-    margin: 25px;
-    cursor: pointer;
-    font-family: "Bebas Neue";
-  }
-}
-
-dialog {
-  margin: auto;
-  h2.comprar-menu {
-    text-align: center;
-    text-transform: uppercase;
-  }
-  div.dialog-edit {
-    text-align: center;
-    display: grid;
-    grid-template-columns: repeat(3, 500px);
-    justify-items: center;
-
-    div.imagem-menu-dialog {
-      display: grid;
-      justify-items: center;
-      img.dialog-menu {
-        width: 200px;
-      }
-      button.botao-comprar {
-        width: 150px;
-        height: 30px;
-        border-radius: 30px;
-        cursor: pointer;
-      }
-      strong.nome-menu-dialog {
-        margin: 10px;
-        text-transform: uppercase;
-      }
-    }
-    button.fechar {
-      width: 100px;
-      height: 40px;
-      font-size: 20px;
-      border-radius: 30px;
-      cursor: pointer;
-      margin: 60px;
-    }
-    button.botao-carrinho {
-      width: 100px;
-      height: 40px;
-      font-size: 20px;
-      border-radius: 30px;
-      cursor: pointer;
-      margin: 60px;
-    }
-  }
-}
-
-/*RESPONSIVIDADE*/
-@media (max-width: 320px) {
-  header.cabeçalho {
-    div.imagem-logo {
-      img.logo {
-        position: relative;
-        left: 0px;
-        width: 60px;
-      }
-    }
-    h1.titulo-principal {
-      font-size: 20px;
-      text-align: center;
-      bottom: 40px;
-    }
-    ul.lista-header {
-      li.lista {
-        position: relative;
-        img.carrinho {
-          width: 30px;
-          left: 230px;
-          bottom: 30px;
-        }
-      }
-    }
-  }
+body {
+  background-color: #4A0404;
   main.principal {
-    div.imagem-principal {
-      div.botoes {
-        left: 40px;
+    div.div-principal {
+      div.imagem-principal {
+        height: 650px;
+        background-image: url(/imagens/plano-fundo-main.jpeg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
       }
     }
   }
+
+  .hr-donuts {
+    margin-bottom: 70px;
+    border: 3px outset var(--divisaodonuts);
+  }
+
   footer.rodape-index {
     div.edicao-rodape {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0px -400px;
+      background-color: #4A0404;
+
       div.icone-rodape {
+        display: flex;
+        justify-content: center;
+
+        img.social-img {
+          width: 200px;
+        }
+        img.instagram:hover {
+          transform: scale(1.2);
+        }
+
         strong.comentario-rodape-index {
-          font-size: 20px;
+          font-size: 30px;
+          margin: auto 0;
+          font-family: "Oleo Script";
         }
       }
+    }
+    h2.cardapio-titulo {
+      background-color: #4A0404;
+      color: #ffa6ba;
+      font-size: 80px;
+      text-align: center;
+      font-family: "Lobster";
+      margin: 30px;
+    }
+    div.categoria-cardapio {
+      background-color: #4A0404;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      button.button-categoria-cardapio {
+        background-color: #601a28;
+        margin: 100px;
+        width: 100%;
+        height: 100px;
+        border-radius: 20px;
+        font-size: 80px;
+        box-shadow: 2px 2px 2px 2px black;
+        filter: contrast(100%);
+        font-family: "Gabriela";
+        color: wheat;
+      }
+    }
+
+    div.cardapio {
+      display: grid;
+      grid-template-columns: repeat(5, 350px);
+      justify-content: center;
+      img.cardapio-imagem {
+        width: 250px;
+      }
+      div.imagem-divpropria {
+        text-align: center;
+        p.nome-item {
+          font-size: 30px;
+          font-family: "Gabriela";
+          color: white;
+        }
+        input.quantidade-item {
+          width: 120px;
+          border-radius: 20px;
+          height: 40px;
+          font-size: 25px;
+          text-align: center;
+          padding: 10px;
+        }
+        span.preco {
+          font-size: 25px;
+          font-family: "Dancing Script";
+          color: #fadadd;
+        }
+      }
+    }
+  }
+
+  header.topo-social {
+    background-image: url(/imagens/gradiante-topo-social.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    row-gap: 20px;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    div.topo-perfis {
+      display: flex;
+      gap: 70px;
+      justify-content: center;
+      font-family: "Oleo Script";
+      font-size: 20px;
+      img {
+        width: 100px;
+        margin: 20px;
+        border-radius: 70px;
+        border: outset 2px var(--divisao-bordaperfil);
+        cursor: pointer;
+        box-shadow: 2px 1px 2px 2px;
+      }
+      img:hover {
+        transform: scale(1.2);
+      }
+      div.perfil-topo {
+        strong.nome-perfil-topo {
+          display: flex;
+          justify-content: center;
+          color: var(--cardapiodonuts-textosocial);
+        }
+      }
+    }
+    hr.divisao {
+      border: solid 2px var(--cortexto-boxshadow);
+    }
+  }
+
+  body.bodymain-social {
+    background-image: url(/imagens/velvet-background-post.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 1500px;
+
+    main.principal-social {
+      div.aba-meuperfil {
+        width: 350px;
+        height: 767px;
+        position: fixed;
+        bottom: -36px;
+        margin: auto;
+        box-shadow: 0px 0px 0px 4px;
+        font-family: "Oleo Script";
+        background-image: url(/imagens/velvete-gradiante.png);
+        background-size: cover;
+        div.aba-meuperfil-v1 {
+          display: flex;
+          flex-direction: column;
+          gap: 110px;
+          color: var(--cardapiodonuts-textosocial);
+          margin: 20px;
+          position: absolute;
+          bottom: 200px;
+          div.home-social {
+            display: flex;
+            strong.nome-icones-social {
+              margin: auto 0;
+              text-transform: uppercase;
+              margin-left: 10px;
+              font-size: 30px;
+            }
+            img:hover {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+      div.postagem-principal {
+        div.postagens {
+          text-align: center;
+          position: relative;
+          top: 250px;
+          bottom: 0;
+          left: 650px;
+          right: 0;
+          margin: auto;
+          display: inline-block;
+          div.postagem-perfil {
+            display: flex;
+            justify-content: center;
+            margin-left: -400px;
+            img.perfil-postagem {
+              border-radius: 70px;
+              border: solid 3px var(--cortexto-boxshadow);
+              margin-bottom: 10px;
+            }
+            strong.nome-postagem-perfil {
+              margin: auto 0;
+              margin-left: 20px;
+              font-size: 25px;
+              font-family: "Oleo Script";
+              color: var(--cardapiodonuts-textosocial);
+            }
+          }
+          div.postagem {
+            img.postagem-corpo {
+              border: solid 3px var(--cortexto-boxshadow);
+              border-radius: 50px;
+              border: outset 5px var(--bordapostagem);
+              box-shadow: 3px 5px 7px 6px;
+              margin-bottom: 10px;
+            }
+            p.coment-postagem-perfil {
+              color: var(--cardapiodonuts-textosocial);
+              text-align: center;
+              font-size: 20px;
+              font-family: "Rozha One";
+              text-shadow: 2px 0px 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  header.topo-menu {
+    text-align: center;
+
+    div.menu-header {
+      margin: 50px;
+
+      h2.menu-header {
+        text-transform: uppercase;
+        font-family: "Bebas Neue";
+        font-size: 50px;
+      }
+    }
+  }
+
+  body.corpo-donuts {
+    background-color: var(--fundodonuts);
+  }
+
+  main.principal-menu {
+    section.sessao-menu {
+      div.menu {
+        margin-left: 150px;
+        display: grid;
+        grid-template-columns: repeat(4, 400px);
+
+        div.caixas-menu {
+          box-shadow: 2px 0px 5px 3px var(--cortexto-boxshadow);
+          margin: 20px;
+          border-radius: 20px;
+          background-color: #fffff0;
+
+          div.menu-block {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+
+            img {
+              width: 300px;
+              margin: auto;
+              cursor: pointer;
+            }
+
+            img:hover {
+              transform: scale(1.2);
+            }
+
+            strong.menu-coment {
+              margin: auto;
+              font-size: 25px;
+              font-family: "Concert One";
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer.rodape-menu {
+    display: flex;
+    justify-content: center;
+    button.botao-comprar-menu {
+      width: 130px;
+      height: 50px;
+      font-size: 20px;
+      border-radius: 30px;
+      border: outset 3px var(--cortexto-boxshadow);
+      box-shadow: 3px 2px 7px 1px;
+      margin: 25px;
+      cursor: pointer;
+      font-family: "Bebas Neue";
+    }
+    button.botao-carrinho-menu {
+      width: 130px;
+      height: 50px;
+      font-size: 20px;
+      border-radius: 30px;
+      border: outset 3px var(--cortexto-boxshadow);
+      box-shadow: 3px 2px 7px 1px;
+      margin: 25px;
+      cursor: pointer;
+      font-family: "Bebas Neue";
     }
   }
 }
