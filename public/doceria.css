@@ -144,10 +144,15 @@ body {
       }
       div.imagem-divpropria {
         text-align: center;
+        margin: 20px;
+        box-shadow: 2px 2px 2px 2px;
+        border-radius: 20px;
+        padding: 20px;
+        background-color: ;
         p.nome-item {
           font-size: 30px;
           font-family: "Gabriela";
-          color: 4A0404;
+          color: #4A0404;
         }
         input.quantidade-item {
           width: 120px;
@@ -161,6 +166,15 @@ body {
           font-size: 25px;
           font-family: "Dancing Script";
           color: #1b0404;
+        }
+        button.compra {
+        width: 110px;
+        height: 50px;
+        margin: 10px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-family: "Gabriela";
+        font-size: 20px;
         }
       }
     }
