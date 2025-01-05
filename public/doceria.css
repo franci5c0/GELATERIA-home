@@ -76,8 +76,8 @@ body {
     border: 3px outset var(--divisaodonuts);
   }
 
-  footer.rodape-index {
-    div.edicao-rodape {
+  div.cardapio-index{
+    div.edicao-cardapio-index {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: 0px -400px;
@@ -319,72 +319,5 @@ body {
 
   body.corpo-donuts {
     background-color: var(--fundodonuts);
-  }
-
-  main.principal-menu {
-    section.sessao-menu {
-      div.menu {
-        margin-left: 150px;
-        display: grid;
-        grid-template-columns: repeat(4, 400px);
-
-        div.caixas-menu {
-          box-shadow: 2px 0px 5px 3px var(--cortexto-boxshadow);
-          margin: 20px;
-          border-radius: 20px;
-          background-color: #fffff0;
-
-          div.menu-block {
-            display: flex;
-            flex-direction: column;
-            margin: auto;
-
-            img {
-              width: 300px;
-              margin: auto;
-              cursor: pointer;
-            }
-
-            img:hover {
-              transform: scale(1.2);
-            }
-
-            strong.menu-coment {
-              margin: auto;
-              font-size: 25px;
-              font-family: "Concert One";
-              margin-bottom: 20px;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  footer.rodape-menu {
-    display: flex;
-    justify-content: center;
-    button.botao-comprar-menu {
-      width: 130px;
-      height: 50px;
-      font-size: 20px;
-      border-radius: 30px;
-      border: outset 3px var(--cortexto-boxshadow);
-      box-shadow: 3px 2px 7px 1px;
-      margin: 25px;
-      cursor: pointer;
-      font-family: "Bebas Neue";
-    }
-    button.botao-carrinho-menu {
-      width: 130px;
-      height: 50px;
-      font-size: 20px;
-      border-radius: 30px;
-      border: outset 3px var(--cortexto-boxshadow);
-      box-shadow: 3px 2px 7px 1px;
-      margin: 25px;
-      cursor: pointer;
-      font-family: "Bebas Neue";
-    }
   }
 }
