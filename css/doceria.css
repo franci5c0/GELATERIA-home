@@ -1,0 +1,332 @@
+/* FONTES */
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&family=Playwrite+CU:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Playwrite+NL:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gabriela&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --textodonutsnatal: #dc143c;
+  --bordaperfilsocial-divisoesdonuts: #8b008b;
+  --divisao-bordaperfil: #8b0000;
+  --divisaodonuts: #dda0dd;
+  --botaoindex: #f4a460;
+  --boxshadow: #8b4513;
+  --cortexto-boxshadow: #000000;
+  --fundodonuts: #ffffff;
+  --cardapiodonuts-textosocial: #e6e6fa;
+  --main-donuts: #fd94fd;
+  --divsdonuts: #d8bfd8;
+  --donutsnatal-shadowspan: #00ff7f;
+  --bordapostagem: #00008b;
+  --velvet: #902c3e;
+  --fundocarrinho: #e0ffff;
+  --topoindex-rodape-hr: #db7093;
+  --h1: #ffb6c1;
+  --hr: #ffc0cb;
+  --botoesmain: #ffa07a;
+}
+
+header.cabeçalho {
+  /* background-image: url(/css/confeitaria-topo.png); */
+  background-color: #4a0404;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* filter: brightness(120%); */
+
+  h1.titulo-principal {
+    font-size: 70px;
+    font-weight: 100;
+    font-family: "Lobster";
+    text-align: center;
+    /* filter: contrast(200%); */
+    color: var(--h1);
+    text-shadow: 2px 2px 2px;
+    /* filter: drop-shadow(5px 0px 10px rgb(233, 187, 36)); */
+  }
+  div.imagem-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    img.logo {
+      width: 150px;
+    }
+  }
+}
+
+hr.hr {
+  border: solid #1b0404;
+  max-width: 100%;
+}
+
+body {
+  background-color: #4A0404;
+  main.principal {
+    div.div-principal {
+      div.imagem-principal {
+        height: 650px;
+        background-image: url(../img/banners/plano-fundo-main.jpeg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  .hr-donuts {
+    margin-bottom: 70px;
+    border: 3px outset var(--divisaodonuts);
+  }
+
+  div.cardapio-index{
+    div.edicao-cardapio-index {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0px -400px;
+      background-color: #A9A9A9   ;
+
+      div.icone-rodape {
+        display: flex;
+        justify-content: center;
+
+        img.social-img {
+          width: 200px;
+        }
+        img.instagram:hover {
+          transform: scale(1.2);
+        }
+
+        strong.comentario-rodape-index {
+          font-size: 30px;
+          margin: auto 0;
+          font-family: "Oleo Script";
+        }
+      }
+    }
+    h2.cardapio-titulo {
+      background-color: #4A0404;
+      color: #ffa6ba;
+      font-size: 80px;
+      text-align: center;
+      font-family: "Lobster";
+      margin: 30px;
+    }
+    div.categoria-cardapio {
+      background-color: #A9A9A9  ;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      /* button.button-categoria-cardapio {
+        background-color: #601a28;
+        margin: 100px;
+        width: 1700px;
+        height: 100px;
+        border-radius: 20px;
+        font-size: 80px;
+        box-shadow: 2px 2px 2px 2px black;
+        font-family: "Gabriela";
+        color: wheat;
+      } */
+       h3.categoria-titulo {
+        font-size: 70px;
+        font-family: "Lobster";
+        margin: 50px;
+        color: #4A0404;
+        width: 100%;
+        text-align: center;
+       }
+    }
+
+    section.cardapio {
+      display: grid;
+      grid-template-columns: repeat(5, 350px);
+      justify-content: center;
+      img.cardapio-imagem {
+        width: 250px;
+      }
+      div.imagem-divpropria {
+        text-align: center;
+        margin: 20px;
+        box-shadow: 2px 2px 2px 2px;
+        border-radius: 20px;
+        padding: 20px;
+        p.nome-item {
+          font-size: 30px;
+          font-family: "Gabriela";
+          color: #4A0404;
+        }
+        input.quantidade-item {
+          width: 120px;
+          border-radius: 20px;
+          height: 40px;
+          font-size: 25px;
+          text-align: center;
+          padding: 10px;
+        }
+        span.preco {
+          font-size: 25px;
+          font-family: "Dancing Script";
+          color: #1b0404;
+        }
+        button.compra {
+        width: 110px;
+        height: 50px;
+        margin: 10px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-family: "Gabriela";
+        font-size: 20px;
+        }
+      }
+    }
+  }
+
+  header.topo-social {
+    background-image: url(/imagens/gradiante-topo-social.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    row-gap: 20px;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    div.topo-perfis {
+      display: flex;
+      gap: 70px;
+      justify-content: center;
+      font-family: "Oleo Script";
+      font-size: 20px;
+      img {
+        width: 100px;
+        margin: 20px;
+        border-radius: 70px;
+        border: outset 2px var(--divisao-bordaperfil);
+        cursor: pointer;
+        box-shadow: 2px 1px 2px 2px;
+      }
+      img:hover {
+        transform: scale(1.2);
+      }
+      div.perfil-topo {
+        strong.nome-perfil-topo {
+          display: flex;
+          justify-content: center;
+          color: var(--cardapiodonuts-textosocial);
+        }
+      }
+    }
+    hr.divisao {
+      border: solid 2px var(--cortexto-boxshadow);
+    }
+  }
+
+  body.bodymain-social {
+    background-image: url(/imagens/velvet-background-post.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 1500px;
+
+    main.principal-social {
+      div.aba-meuperfil {
+        width: 350px;
+        height: 767px;
+        position: fixed;
+        bottom: -36px;
+        margin: auto;
+        box-shadow: 0px 0px 0px 4px;
+        font-family: "Oleo Script";
+        background-image: url(/imagens/velvete-gradiante.png);
+        background-size: cover;
+        div.aba-meuperfil-v1 {
+          display: flex;
+          flex-direction: column;
+          gap: 110px;
+          color: var(--cardapiodonuts-textosocial);
+          margin: 20px;
+          position: absolute;
+          bottom: 200px;
+          div.home-social {
+            display: flex;
+            strong.nome-icones-social {
+              margin: auto 0;
+              text-transform: uppercase;
+              margin-left: 10px;
+              font-size: 30px;
+            }
+            img:hover {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+      div.postagem-principal {
+        div.postagens {
+          text-align: center;
+          position: relative;
+          top: 250px;
+          bottom: 0;
+          left: 650px;
+          right: 0;
+          margin: auto;
+          display: inline-block;
+          div.postagem-perfil {
+            display: flex;
+            justify-content: center;
+            margin-left: -400px;
+            img.perfil-postagem {
+              border-radius: 70px;
+              border: solid 3px var(--cortexto-boxshadow);
+              margin-bottom: 10px;
+            }
+            strong.nome-postagem-perfil {
+              margin: auto 0;
+              margin-left: 20px;
+              font-size: 25px;
+              font-family: "Oleo Script";
+              color: var(--cardapiodonuts-textosocial);
+            }
+          }
+          div.postagem {
+            img.postagem-corpo {
+              border: solid 3px var(--cortexto-boxshadow);
+              border-radius: 50px;
+              border: outset 5px var(--bordapostagem);
+              box-shadow: 3px 5px 7px 6px;
+              margin-bottom: 10px;
+            }
+            p.coment-postagem-perfil {
+              color: var(--cardapiodonuts-textosocial);
+              text-align: center;
+              font-size: 20px;
+              font-family: "Rozha One";
+              text-shadow: 2px 0px 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  header.topo-menu {
+    text-align: center;
+
+    div.menu-header {
+      margin: 50px;
+
+      h2.menu-header {
+        text-transform: uppercase;
+        font-family: "Bebas Neue";
+        font-size: 50px;
+      }
+    }
+  }
+
+  body.corpo-donuts {
+    background-color: var(--fundodonuts);
+  }
+}
