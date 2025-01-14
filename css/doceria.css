@@ -12,7 +12,7 @@
   box-sizing: border-box;
 }
 
-:root {
+/* :root {
   --textodonutsnatal: #dc143c;
   --bordaperfilsocial-divisoesdonuts: #8b008b;
   --divisao-bordaperfil: #8b0000;
@@ -32,32 +32,26 @@
   --h1: #ffb6c1;
   --hr: #ffc0cb;
   --botoesmain: #ffa07a;
-}
+} */
 
 header.cabeçalho {
   /* background-image: url(/css/confeitaria-topo.png); */
   background-color: #4a0404;
   background-repeat: no-repeat;
   background-size: cover;
-  /* filter: brightness(120%); */
+  padding: 50px;
+  /* filter: brightness(120%);  */
 
   h1.titulo-principal {
     font-size: 70px;
     font-weight: 100;
     font-family: "Lobster";
     text-align: center;
+    color: white;
     /* filter: contrast(200%); */
-    color: var(--h1);
+
     text-shadow: 2px 2px 2px;
     /* filter: drop-shadow(5px 0px 10px rgb(233, 187, 36)); */
-  }
-  div.imagem-logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    img.logo {
-      width: 150px;
-    }
   }
 }
 
@@ -67,12 +61,12 @@ hr.hr {
 }
 
 body {
-  background-color: #4A0404;
+  background-color: #4a0404;
   main.principal {
     div.div-principal {
       div.imagem-principal {
-        height: 650px;
-        background-image: url(../img/banners/plano-fundo-main.jpeg);
+        height: 700px;
+        background-image: url(../img/banners/fundo-index.jpeg);
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: center;
@@ -85,12 +79,12 @@ body {
     border: 3px outset var(--divisaodonuts);
   }
 
-  div.cardapio-index{
+  div.cardapio-index {
     div.edicao-cardapio-index {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: 0px -400px;
-      background-color: #A9A9A9   ;
+      background-color: #a9a9a9;
 
       div.icone-rodape {
         display: flex;
@@ -110,16 +104,24 @@ body {
         }
       }
     }
-    h2.cardapio-titulo {
-      background-color: #4A0404;
-      color: #ffa6ba;
-      font-size: 80px;
-      text-align: center;
-      font-family: "Lobster";
-      margin: 30px;
+    div.cardapio-div {
+      display: grid;
+      align-items: center;
+
+      display: flex;
+      justify-content: center;
+      h2.cardapio-titulo {
+        background-color: #4a0404;
+        color: #ffa6ba;
+        font-size: 80px;
+        text-align: center;
+        font-family: "Lobster";
+        margin: 30px;
+      }
     }
+
     div.categoria-cardapio {
-      background-color: #A9A9A9  ;
+      background-color: #a9a9a9;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -134,14 +136,14 @@ body {
         font-family: "Gabriela";
         color: wheat;
       } */
-       h3.categoria-titulo {
+      h3.categoria-titulo {
         font-size: 70px;
         font-family: "Lobster";
         margin: 50px;
-        color: #4A0404;
+        color: #4a0404;
         width: 100%;
         text-align: center;
-       }
+      }
     }
 
     section.cardapio {
@@ -160,7 +162,7 @@ body {
         p.nome-item {
           font-size: 30px;
           font-family: "Gabriela";
-          color: #4A0404;
+          color: #4a0404;
         }
         input.quantidade-item {
           width: 120px;
@@ -176,13 +178,13 @@ body {
           color: #1b0404;
         }
         button.compra {
-        width: 110px;
-        height: 50px;
-        margin: 10px;
-        border-radius: 30px;
-        cursor: pointer;
-        font-family: "Gabriela";
-        font-size: 20px;
+          width: 110px;
+          height: 50px;
+          margin: 10px;
+          border-radius: 30px;
+          cursor: pointer;
+          font-family: "Gabriela";
+          font-size: 20px;
         }
       }
     }
