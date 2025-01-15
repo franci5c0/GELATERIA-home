@@ -17,8 +17,9 @@
 }
 
 header.cabeçalho {
-  /* background-image: url(/css/confeitaria-topo.png); */
-  background-color: var(--cereja);
+   background-image: url(../img/banners/degrade-header.png); 
+   background-position: 0px 0px;
+  /* background-color: var(--cereja); */
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px;
@@ -50,7 +51,7 @@ body {
         background-image: url(../img/banners/background-index.jpeg);
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: 0px -450px;
       }
     }
   }
@@ -89,9 +90,14 @@ body {
     div.cardapio-div {
       display: grid;
       align-items: center;
-      background-color: var(--cereja);
+      background-color: #dec7b7;
       display: flex;
       justify-content: center;
+      background-image: url(../img/banners/degrade-index.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 0px -400px;
+      padding: 20px;
       h2.cardapio-titulo {
         font-size: 80px;
         text-align: center;
